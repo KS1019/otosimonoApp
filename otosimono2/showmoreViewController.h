@@ -12,6 +12,7 @@
 
 @interface showmoreViewController : UIViewController{
     UIImage *showimage;
+        
     IBOutlet UIImageView *siv;
     
 }

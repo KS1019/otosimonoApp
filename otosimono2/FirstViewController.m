@@ -77,13 +77,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"I want to kill you."sender:self];
     segue++;
+    img=[imagearray objectAtIndex:indexPath.row];
+    
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"I want to kill you."]) {
         showmoreViewController *resultVC=segue.destinationViewController;
-        UIImage *img=[imagearray objectAtIndex:indexPath.row];
-
-        resultVC.showimage=
+               resultVC.showimage=img;
     }
 }
 #pragma mark- テーブルビュー

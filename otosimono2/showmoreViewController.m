@@ -31,7 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
        //[self presentPopupViewController:detailViewController animationType:MJPopupViewAnimationFade];
-    siv=showimage;
+    [siv setImage:showimage];
+    //siv=showimage;
 }
 
 - (void)didReceiveMemoryWarning

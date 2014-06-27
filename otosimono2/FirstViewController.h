@@ -16,7 +16,8 @@
     
     int segue;
     
-   
+    UIImage *img;
+
     NSString *testr;
     NSString *str;
     
