@@ -20,6 +20,7 @@
 
     NSString *testr;
     NSString *str;
+    NSString *comstr;
     
     NSMutableArray *textarray;
     NSMutableArray *imagearray;

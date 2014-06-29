@@ -78,7 +78,7 @@
     NSLog(@"didSelect");
     segue++;
     [self performSegueWithIdentifier:@"Segue" sender:[imagearray objectAtIndex:indexPath.row]];
-    
+    comstr = [textarray objectAtIndex:indexPath.row];
 }
 
 
@@ -88,7 +88,6 @@
         showmoreViewController *resultVC = sg.destinationViewController;
         UIImage *image = [UIImage imageWithData:[sender getData]];
         resultVC.showimage  = image;
-        NSString *comstr = 
         resultVC.CommentString = comstr;
         NSLog(@"resultVC.showimage is %@", resultVC.showimage);
     }
