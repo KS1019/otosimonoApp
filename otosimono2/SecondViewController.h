@@ -12,7 +12,7 @@
 #import "SVProgressHUD.h"
 
 
-@interface SecondViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
+@interface SecondViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>{
     IBOutlet UIImageView *LostPhoto;
     IBOutlet UITextView *Comment;
     IBOutlet UIImageView  *testimageview;

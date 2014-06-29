@@ -11,10 +11,16 @@
 #import "UIViewController+MJPopupViewController.h"
 
 @interface showmoreViewController : UIViewController{
-    UIImage *showimage;
         
     IBOutlet UIImageView *siv;
+    IBOutlet UITextView *tv;
+    
+    NSString *CommentString;
     
 }
+@property(nonatomic)NSString *CommentString;
+
+
+
 @property(nonatomic)UIImage *showimage;
 @end

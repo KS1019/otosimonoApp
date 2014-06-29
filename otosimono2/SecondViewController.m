@@ -56,7 +56,7 @@
         UIImage *testimage2=[[UIImage alloc]initWithData:testimage];
         [testimageview setImage:testimage2];
         
-        NSString *testooooo=[testobject objectForKey:@"objectId"];
+        //NSString *testooooo=[testobject objectForKey:@"objectId"];
         //NSLog(@"objectId->%@",testooooo);
         }
     }];
@@ -136,7 +136,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
                 ipc.sourceType =
                 UIImagePickerControllerSourceTypeCamera;  // 画像の取得先をカメラに設定
                 ipc.allowsEditing = YES;  // 画像取得後編集する
-                [self presentModalViewController:ipc animated:YES];
+                [self presentViewController:ipc animated:YES completion:nil];
                 // モーダルビューとしてカメラ画面を呼び出す
             }
             break;
@@ -172,20 +172,20 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
--(void)textViewShouldBeginEditing:
-(UITextView*)textView{
+-(BOOL)textViewShouldBeginEditing:(UITextView*)textView{
     if (i==1) {
        Comment.text=@"";
         i=2;
     }
     
     NSLog(@"っふうううう");
+    return YES;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"jcncdndnksd");
     // ここにtextデータの処理
-    NSString *comstr=Comment.text;
+    comstr=Comment.text;
     NSLog(@"タッチビギンメソッドー＞%@",comstr);
 
     // キーボードを閉じる

@@ -15,7 +15,9 @@
 @end
 
 @implementation showmoreViewController
+
 @synthesize showimage;
+@synthesize CommentString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,9 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-       //[self presentPopupViewController:detailViewController animationType:MJPopupViewAnimationFade];
-    [siv setImage:showimage];
+    
+    [siv setImage:self.showimage];
+    tv.text=CommentString;
+    NSLog(@"~~~~~~~~~~~~~~~~~~~ %@",CommentString);
+    NSLog(@"showimage is %@", self.showimage);
     //siv=showimage;
 }
 
@@ -51,22 +55,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)facebookButtonTapped:(id)sender {
-    // パーミッション
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
-    // Facebook アカウントを使ってログイン
-    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        if (!user) {
-            if (!error) {
-                NSLog(@"Facebook ログインをユーザーがキャンセル");
-            } else {
-                NSLog(@"Facebook ログイン中にエラーが発生: %@", error);
-            }
-        } else if (user.isNew) {
-            NSLog(@"Facebook サインアップ & ログイン完了!");
-        } else {
-            NSLog(@"Facebook ログイン完了!");
-        }
-    }];
-}
 @end

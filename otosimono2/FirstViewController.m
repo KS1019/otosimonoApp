@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad
 {
-        table.delegate=self;
+    table.delegate=self;
     table.dataSource=self;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -38,7 +38,7 @@
     }else{
         [self refresh]; 
     }
-    NSLog(@"44444444444444444");
+    //NSLog(@"44444444444444444");
 }
 
 -(IBAction)refresh{
@@ -61,40 +61,59 @@
             NSLog(@"textarray->%@",textarray);
             //NSLog(@"%@",teststr);
             
-            PFFile *testimage=[testobject objectForKey:@"image"];
+            testimage=[testobject objectForKey:@"image"];
             [imagearray addObject:testimage];
-            //UIImage *testimage2=[[UIImage alloc]initWithData:testimage];
-            //[lostPhotoView setImage:testimage2];
             
-           // NSString *testooooo=[testobject objectForKey:@"objectId"];
-            //NSLog(@"objectId->%@",testooooo);
+            
+            NSLog(@"========== imageArray is %@", imagearray);
             NSLog(@"%@",textarray[0]);
             [table reloadData];
         }
     }];
-
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"I want to kill you."sender:self];
-    segue++;
-    img=[imagearray objectAtIndex:indexPath.row];
     
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"I want to kill you."]) {
-        showmoreViewController *resultVC=segue.destinationViewController;
-               resultVC.showimage=img;
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"didSelect");
+    segue++;
+    [self performSegueWithIdentifier:@"Segue" sender:[imagearray objectAtIndex:indexPath.row]];
+    
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
+    if ([sg.identifier isEqualToString:@"Segue"]) {
+        
+        showmoreViewController *resultVC = sg.destinationViewController;
+        UIImage *image = [UIImage imageWithData:[sender getData]];
+        resultVC.showimage  = image;
+        NSString *comstr = 
+        resultVC.CommentString = comstr;
+        NSLog(@"resultVC.showimage is %@", resultVC.showimage);
     }
 }
+
+
+
+
+
+
 #pragma mark- テーブルビュー
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
+
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [textarray count];
     //return 3;
 }
+
+
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellIdentifier=@"Cell";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -105,8 +124,8 @@
     cell.textLabel.text=[textarray objectAtIndex:indexPath.row];
     
     cell.imageView.backgroundColor = [UIColor grayColor];
-    PFFile *img = [imagearray objectAtIndex:indexPath.row];
-     [img getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+    PFFile *pfImage = [imagearray objectAtIndex:indexPath.row];
+    [pfImage getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
         if (!error) {
             cell.imageView.image = [UIImage imageWithData:imageData];
             [table reloadData];

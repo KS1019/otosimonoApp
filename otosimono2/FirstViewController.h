@@ -24,6 +24,8 @@
     NSMutableArray *textarray;
     NSMutableArray *imagearray;
     
+    UIImage *passImage;
+    
     PFFile *testimage;
 }
 -(IBAction)refresh;
