@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "UIViewController+MJPopupViewController.h"
 
-@interface showmoreViewController : UIViewController{
+@interface showmoreViewController : UIViewController<UITextViewDelegate>{
         
     IBOutlet UIImageView *siv;
     IBOutlet UITextView *tv;

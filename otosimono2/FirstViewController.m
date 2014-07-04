@@ -75,25 +75,40 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //セルタップ時に呼び出される。
     NSLog(@"didSelect");
     segue++;
-    [self performSegueWithIdentifier:@"Segue" sender:[imagearray objectAtIndex:indexPath.row]];
-    comstr = [textarray objectAtIndex:indexPath.row];
+    //[self performSegueWithIdentifier:@"Segue" sender:[imagearray objectAtIndex:indexPath.row]];
+    
+    [self performSegueWithIdentifier:@"Segue" sender:indexPath];
+    
+   // NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&& %@ &&&&&&&&&&&&&&&&&&&&&",comstr);
+    /*-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
+    if ([sg.identifier isEqualToString:@"Segue"])の後に呼ばれる*/
 }
 
 
--(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender {
     if ([sg.identifier isEqualToString:@"Segue"]) {
+        /*-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPathより先に呼ばれる。*/
         
         showmoreViewController *resultVC = sg.destinationViewController;
-        UIImage *image = [UIImage imageWithData:[sender getData]];
+        //UIImage *image = [UIImage imageWithData:[sender getData]];
+        NSIndexPath* indexPath = (NSIndexPath*)sender;
+        NSLog(@"length of ImageArray %ld",[imagearray count]);
+        UIImage *image = [UIImage imageWithData:[[imagearray objectAtIndex: indexPath.row] getData]];
+       // comstr = [textarray objectAtIndex:indexPath.row];
         resultVC.showimage  = image;
-        resultVC.CommentString = comstr;
+        resultVC.CommentString = [textarray objectAtIndex:indexPath.row];
         NSLog(@"resultVC.showimage is %@", resultVC.showimage);
+        NSLog(@"resultVC.CommentString is %@",resultVC.CommentString);
     }
 }
 
+-(void)o{
+    
 
+}
 
 
 
