@@ -39,8 +39,6 @@
 		7C35E8D71916210D00CC0573 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8D61916210D00CC0573 /* Parse.framework */; };
 		7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D9F511941E05D0030F992 /* ShowViewController.m */; };
 		7CA51EE419176A6C001BAF56 /* icon256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA51EE319176A6C001BAF56 /* icon256@2x.png */; };
-		7CAC69B9195D7760009222DF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC69B6195D7760009222DF /* MJPopupBackgroundView.m */; };
-		7CAC69BA195D7760009222DF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC69B8195D7760009222DF /* UIViewController+MJPopupViewController.m */; };
 		7CAC69BD195D809D009222DF /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC69BC195D809D009222DF /* loginViewController.m */; };
 		7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACD4241954527B009A1510 /* showmoreViewController.m */; };
 		7CACD5791954554E009A1510 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACD4271954554D009A1510 /* FacebookSDK.framework */; };
@@ -100,10 +98,6 @@
 		7C7D9F501941E05D0030F992 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		7C7D9F511941E05D0030F992 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		7CA51EE319176A6C001BAF56 /* icon256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon256@2x.png"; sourceTree = "<group>"; };
-		7CAC69B5195D7760009222DF /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
-		7CAC69B6195D7760009222DF /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
-		7CAC69B7195D7760009222DF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
-		7CAC69B8195D7760009222DF /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		7CAC69BB195D809D009222DF /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		7CAC69BC195D809D009222DF /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		7CACD4231954527B009A1510 /* showmoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showmoreViewController.h; sourceTree = "<group>"; };
@@ -157,7 +151,6 @@
 		7C35E84D1915CA5600CC0573 = {
 			isa = PBXGroup;
 			children = (
-				7CAC69B4195D7760009222DF /* Source */,
 				7CFBA4C219389F5F008B58C0 /* SVProgressHUD */,
 				7C079555192F5C8B0074A869 /* CAMERABTN.png */,
 				7C116BCA1918711100ADF2F3 /* TOUKOU2.png */,
@@ -254,18 +247,6 @@
 				7C35E8841915CA5600CC0573 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7CAC69B4195D7760009222DF /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				7CAC69B5195D7760009222DF /* MJPopupBackgroundView.h */,
-				7CAC69B6195D7760009222DF /* MJPopupBackgroundView.m */,
-				7CAC69B7195D7760009222DF /* UIViewController+MJPopupViewController.h */,
-				7CAC69B8195D7760009222DF /* UIViewController+MJPopupViewController.m */,
-			);
-			name = Source;
-			path = "../../MJPopupViewController-master/Source";
 			sourceTree = "<group>";
 		};
 		7CFBA4C219389F5F008B58C0 /* SVProgressHUD */ = {
@@ -388,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CAC69B9195D7760009222DF /* MJPopupBackgroundView.m in Sources */,
 				7C35E8731915CA5600CC0573 /* SecondViewController.m in Sources */,
 				7C35E86A1915CA5600CC0573 /* AppDelegate.m in Sources */,
 				7CFBA4C819389F5F008B58C0 /* SVProgressHUD.m in Sources */,
@@ -397,7 +377,6 @@
 				7CAC69BD195D809D009222DF /* loginViewController.m in Sources */,
 				7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */,
 				7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */,
-				7CAC69BA195D7760009222DF /* UIViewController+MJPopupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,8 +457,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -511,8 +490,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

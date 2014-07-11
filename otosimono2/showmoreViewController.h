@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "UIViewController+MJPopupViewController.h"
+
 
 @interface showmoreViewController : UIViewController<UITextViewDelegate>{
         

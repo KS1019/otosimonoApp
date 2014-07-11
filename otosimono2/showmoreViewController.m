@@ -8,7 +8,6 @@
 
 #import "showmoreViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import "UIViewController+MJPopupViewController.h"
 
 @interface showmoreViewController ()
 
@@ -34,6 +33,7 @@
     
     [siv setImage:self.showimage];
     tv.text=CommentString;
+    tv.editable = NO;
     NSLog(@"~~~~~~~~~~~~~~~~~~~ %@",CommentString);
     NSLog(@"showimage is %@", self.showimage);
     //siv=showimage;

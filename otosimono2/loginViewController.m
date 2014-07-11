@@ -25,8 +25,11 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [super viewDidLoad ];
+    self.loginView.delegate = self;
     // Do any additional setup after loading the view.
+    self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,7 +37,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)facebookButtonTapped:(id)sender {
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
+{
+     NSLog(@"====1");
+    self.profilePictureView.profileID = [user objectForKey:@"id"];
+    NSLog(@"====2");
+    //self.nameLabel.text = user.name;
+    self.nameLabel.text = [user objectForKey:@"name"];
+     NSLog(@"====3");
+//    NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!%@!!!!!!!!!!!!!!!!!!!!",profilePictureView.profileID);
+//    NSLog(@"$$$$$$$$$$$$$$%@$$$$$$$$",nameLabel.text);
+//    NSLog(@"=======================================================");
+}
+
+
+
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
+{
+   
+    self.profilePictureView.profileID = nil;
+    self.nameLabel.text = @"";
+}
+
+/*- (IBAction)facebookButtonTapped:(id)sender {
     // パーミッション
     NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
     // Facebook アカウントを使ってログイン
@@ -51,7 +77,7 @@
             NSLog(@"Facebook ログイン完了!");
         }
     }];
-}
+}*/
 
 /*
 #pragma mark - Navigation
