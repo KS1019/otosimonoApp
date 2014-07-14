@@ -29,7 +29,9 @@
     self.loginView.delegate = self;
     // Do any additional setup after loading the view.
     self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
-    
+    /*FBLoginView *loginView =
+    [[FBLoginView alloc] initWithReadPermissions:
+     @[@"public_profile", @"email", @"user_friends"]];*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,10 +43,10 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
      NSLog(@"====1");
-    self.profilePictureView.profileID = [user objectForKey:@"id"];
+    self.profilePictureView.profileID = [user objectID];
     NSLog(@"====2");
-    //self.nameLabel.text = user.name;
-    self.nameLabel.text = [user objectForKey:@"name"];
+    self.nameLabel.text = user.name;
+    //self.nameLabel.text = [user objectForKey:@"name"];
      NSLog(@"====3");
 //    NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!%@!!!!!!!!!!!!!!!!!!!!",profilePictureView.profileID);
 //    NSLog(@"$$$$$$$$$$$$$$%@$$$$$$$$",nameLabel.text);

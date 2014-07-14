@@ -38,6 +38,9 @@
 		7C35E8A419160E9900CC0573 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8A319160E9900CC0573 /* SystemConfiguration.framework */; };
 		7C35E8D71916210D00CC0573 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8D61916210D00CC0573 /* Parse.framework */; };
 		7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D9F511941E05D0030F992 /* ShowViewController.m */; };
+		7C956BBB1973BC3D004E5D1B /* LoginTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */; };
+		7C956BDC1973BDFF004E5D1B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C956BBD1973BDFF004E5D1B /* FacebookSDK.framework */; };
+		7C956BDD1973BDFF004E5D1B /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C956BBF1973BDFF004E5D1B /* FBAudienceNetwork.framework */; };
 		7CA51EE419176A6C001BAF56 /* icon256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA51EE319176A6C001BAF56 /* icon256@2x.png */; };
 		7CAC69BD195D809D009222DF /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC69BC195D809D009222DF /* loginViewController.m */; };
 		7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACD4241954527B009A1510 /* showmoreViewController.m */; };
@@ -97,6 +100,10 @@
 		7C35E8D61916210D00CC0573 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7C7D9F501941E05D0030F992 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		7C7D9F511941E05D0030F992 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		7C956BB91973BC3D004E5D1B /* LoginTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTestViewController.h; sourceTree = "<group>"; };
+		7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTestViewController.m; sourceTree = "<group>"; };
+		7C956BBD1973BDFF004E5D1B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		7C956BBF1973BDFF004E5D1B /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		7CA51EE319176A6C001BAF56 /* icon256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon256@2x.png"; sourceTree = "<group>"; };
 		7CAC69BB195D809D009222DF /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		7CAC69BC195D809D009222DF /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
@@ -124,12 +131,14 @@
 				7C35E8A419160E9900CC0573 /* SystemConfiguration.framework in Frameworks */,
 				7C35E8A219160E8B00CC0573 /* StoreKit.framework in Frameworks */,
 				7CACD57A1954554E009A1510 /* FBAudienceNetwork.framework in Frameworks */,
+				7C956BDC1973BDFF004E5D1B /* FacebookSDK.framework in Frameworks */,
 				7C35E8D71916210D00CC0573 /* Parse.framework in Frameworks */,
 				7C35E8A019160E7B00CC0573 /* Security.framework in Frameworks */,
 				7C35E89E19160E6E00CC0573 /* QuartzCore.framework in Frameworks */,
 				7C35E89C19160E6000CC0573 /* MobileCoreServices.framework in Frameworks */,
 				7CACD5791954554E009A1510 /* FacebookSDK.framework in Frameworks */,
 				7C35E89A19160E5000CC0573 /* libz.dylib in Frameworks */,
+				7C956BDD1973BDFF004E5D1B /* FBAudienceNetwork.framework in Frameworks */,
 				7C35E85E1915CA5600CC0573 /* UIKit.framework in Frameworks */,
 				7C35E85A1915CA5600CC0573 /* Foundation.framework in Frameworks */,
 			);
@@ -151,6 +160,7 @@
 		7C35E84D1915CA5600CC0573 = {
 			isa = PBXGroup;
 			children = (
+				7C956BBC1973BDFF004E5D1B /* FacebookSDK */,
 				7CFBA4C219389F5F008B58C0 /* SVProgressHUD */,
 				7C079555192F5C8B0074A869 /* CAMERABTN.png */,
 				7C116BCA1918711100ADF2F3 /* TOUKOU2.png */,
@@ -203,6 +213,8 @@
 				7C35E8681915CA5600CC0573 /* AppDelegate.h */,
 				7C35E8691915CA5600CC0573 /* AppDelegate.m */,
 				7C35E86B1915CA5600CC0573 /* Main.storyboard */,
+				7C956BB91973BC3D004E5D1B /* LoginTestViewController.h */,
+				7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */,
 				7CAC69BB195D809D009222DF /* loginViewController.h */,
 				7CAC69BC195D809D009222DF /* loginViewController.m */,
 				7CACD4231954527B009A1510 /* showmoreViewController.h */,
@@ -247,6 +259,248 @@
 				7C35E8841915CA5600CC0573 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C956BBC1973BDFF004E5D1B /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BBD1973BDFF004E5D1B /* FacebookSDK.framework */,
+				7C956BBE1973BDFF004E5D1B /* FBAudienceNetwork */,
+				7C956BC81973BDFF004E5D1B /* Samples */,
+			);
+			name = FacebookSDK;
+			path = ../../FacebookSDK;
+			sourceTree = "<group>";
+		};
+		7C956BBE1973BDFF004E5D1B /* FBAudienceNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BBF1973BDFF004E5D1B /* FBAudienceNetwork.framework */,
+				7C956BC01973BDFF004E5D1B /* Samples */,
+			);
+			path = FBAudienceNetwork;
+			sourceTree = "<group>";
+		};
+		7C956BC01973BDFF004E5D1B /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BC11973BDFF004E5D1B /* AdUnitsSample */,
+				7C956BC31973BDFF004E5D1B /* MediationAdapters */,
+				7C956BC61973BDFF004E5D1B /* NativeAdSample */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		7C956BC11973BDFF004E5D1B /* AdUnitsSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BC21973BDFF004E5D1B /* AdUnitsSample */,
+			);
+			path = AdUnitsSample;
+			sourceTree = "<group>";
+		};
+		7C956BC21973BDFF004E5D1B /* AdUnitsSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdUnitsSample;
+			sourceTree = "<group>";
+		};
+		7C956BC31973BDFF004E5D1B /* MediationAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BC41973BDFF004E5D1B /* Admob */,
+				7C956BC51973BDFF004E5D1B /* MoPub */,
+			);
+			path = MediationAdapters;
+			sourceTree = "<group>";
+		};
+		7C956BC41973BDFF004E5D1B /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
+		7C956BC51973BDFF004E5D1B /* MoPub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoPub;
+			sourceTree = "<group>";
+		};
+		7C956BC61973BDFF004E5D1B /* NativeAdSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BC71973BDFF004E5D1B /* NativeAdSample */,
+			);
+			path = NativeAdSample;
+			sourceTree = "<group>";
+		};
+		7C956BC71973BDFF004E5D1B /* NativeAdSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NativeAdSample;
+			sourceTree = "<group>";
+		};
+		7C956BC81973BDFF004E5D1B /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BC91973BDFF004E5D1B /* Configurations */,
+				7C956BCA1973BDFF004E5D1B /* FriendPickerSample */,
+				7C956BCC1973BDFF004E5D1B /* GraphApiSample */,
+				7C956BCE1973BDFF004E5D1B /* HelloFacebookSample */,
+				7C956BD01973BDFF004E5D1B /* PlacePickerSample */,
+				7C956BD21973BDFF004E5D1B /* ProfilePictureSample */,
+				7C956BD41973BDFF004E5D1B /* RPSSample */,
+				7C956BD61973BDFF004E5D1B /* Scrumptious */,
+				7C956BD81973BDFF004E5D1B /* SessionLoginSample */,
+				7C956BDA1973BDFF004E5D1B /* SwitchUserSample */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		7C956BC91973BDFF004E5D1B /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		7C956BCA1973BDFF004E5D1B /* FriendPickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BCB1973BDFF004E5D1B /* FriendPickerSample */,
+			);
+			path = FriendPickerSample;
+			sourceTree = "<group>";
+		};
+		7C956BCB1973BDFF004E5D1B /* FriendPickerSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FriendPickerSample;
+			sourceTree = "<group>";
+		};
+		7C956BCC1973BDFF004E5D1B /* GraphApiSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BCD1973BDFF004E5D1B /* GraphApiSample */,
+			);
+			path = GraphApiSample;
+			sourceTree = "<group>";
+		};
+		7C956BCD1973BDFF004E5D1B /* GraphApiSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GraphApiSample;
+			sourceTree = "<group>";
+		};
+		7C956BCE1973BDFF004E5D1B /* HelloFacebookSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BCF1973BDFF004E5D1B /* HelloFacebookSample */,
+			);
+			path = HelloFacebookSample;
+			sourceTree = "<group>";
+		};
+		7C956BCF1973BDFF004E5D1B /* HelloFacebookSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HelloFacebookSample;
+			sourceTree = "<group>";
+		};
+		7C956BD01973BDFF004E5D1B /* PlacePickerSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BD11973BDFF004E5D1B /* PlacePickerSample */,
+			);
+			path = PlacePickerSample;
+			sourceTree = "<group>";
+		};
+		7C956BD11973BDFF004E5D1B /* PlacePickerSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlacePickerSample;
+			sourceTree = "<group>";
+		};
+		7C956BD21973BDFF004E5D1B /* ProfilePictureSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BD31973BDFF004E5D1B /* ProfilePictureSample */,
+			);
+			path = ProfilePictureSample;
+			sourceTree = "<group>";
+		};
+		7C956BD31973BDFF004E5D1B /* ProfilePictureSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfilePictureSample;
+			sourceTree = "<group>";
+		};
+		7C956BD41973BDFF004E5D1B /* RPSSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BD51973BDFF004E5D1B /* RPSSample */,
+			);
+			path = RPSSample;
+			sourceTree = "<group>";
+		};
+		7C956BD51973BDFF004E5D1B /* RPSSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RPSSample;
+			sourceTree = "<group>";
+		};
+		7C956BD61973BDFF004E5D1B /* Scrumptious */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BD71973BDFF004E5D1B /* scrumptious */,
+			);
+			path = Scrumptious;
+			sourceTree = "<group>";
+		};
+		7C956BD71973BDFF004E5D1B /* scrumptious */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = scrumptious;
+			sourceTree = "<group>";
+		};
+		7C956BD81973BDFF004E5D1B /* SessionLoginSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BD91973BDFF004E5D1B /* SessionLoginSample */,
+			);
+			path = SessionLoginSample;
+			sourceTree = "<group>";
+		};
+		7C956BD91973BDFF004E5D1B /* SessionLoginSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SessionLoginSample;
+			sourceTree = "<group>";
+		};
+		7C956BDA1973BDFF004E5D1B /* SwitchUserSample */ = {
+			isa = PBXGroup;
+			children = (
+				7C956BDB1973BDFF004E5D1B /* SwitchUserSample */,
+			);
+			path = SwitchUserSample;
+			sourceTree = "<group>";
+		};
+		7C956BDB1973BDFF004E5D1B /* SwitchUserSample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwitchUserSample;
 			sourceTree = "<group>";
 		};
 		7CFBA4C219389F5F008B58C0 /* SVProgressHUD */ = {
@@ -376,6 +630,7 @@
 				7C35E8661915CA5600CC0573 /* main.m in Sources */,
 				7CAC69BD195D809D009222DF /* loginViewController.m in Sources */,
 				7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */,
+				7C956BBB1973BC3D004E5D1B /* LoginTestViewController.m in Sources */,
 				7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
