@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mT6-2q-jSJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="-4"/>
+            <point key="canvasLocation" x="-177" y="12"/>
         </scene>
         <!--Showmore View Controller-->
         <scene sceneID="ZJM-fi-W2W">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLO-p2-RDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="-232"/>
+            <point key="canvasLocation" x="256" y="12"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJn-pd-cPu">
-                                <rect key="frame" x="60" y="229" width="200" height="200"/>
+                                <rect key="frame" x="20" y="215" width="280" height="186"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-Zp-pV0">
                                 <rect key="frame" x="124" y="150" width="72" height="71"/>
@@ -129,7 +129,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-et-cXa">
-                                <rect key="frame" x="42" y="437" width="236" height="65"/>
+                                <rect key="frame" x="42" y="454" width="236" height="65"/>
                                 <state key="normal" image="SENDBTN.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -137,6 +137,17 @@
                                     <action selector="SEND" destination="QUy-BD-bpt" eventType="touchUpInside" id="MLj-w1-Wra"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-D7-jkB">
+                                <rect key="frame" x="7" y="418" width="307" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="家"/>
+                                    <segment title="店舗等"/>
+                                    <segment title="警察"/>
+                                    <segment title="?"/>
+                                </segments>
+                                <color key="tintColor" red="0.13217776285858207" green="0.37062654751631996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -146,11 +157,12 @@
                     <connections>
                         <outlet property="Comment" destination="rnL-nI-8mc" id="8DQ-pU-BJg"/>
                         <outlet property="LostPhoto" destination="uJn-pd-cPu" id="7bt-WG-fBb"/>
+                        <outlet property="WhereSeg" destination="A3y-D7-jkB" id="R2q-IZ-YYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="124"/>
+            <point key="canvasLocation" x="-146" y="-1108"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -169,7 +181,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-315" y="124"/>
+            <point key="canvasLocation" x="-1435" y="-1668"/>
         </scene>
         <!--Login Test View Controller-->
         <scene sceneID="sAz-Dk-3VL">
@@ -194,24 +206,30 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ1-NE-ryq">
-                                <rect key="frame" x="51" y="26" width="42" height="21"/>
+                                <rect key="frame" x="51" y="26" width="249" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdY-D1-edU">
-                                <rect key="frame" x="200" y="98" width="42" height="21"/>
+                                <rect key="frame" x="128" y="98" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.34248498446190978" green="1" blue="0.62899407936187379" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="BDn-RJ-Cr1" id="f6Q-eP-dVj"/>
+                        <outlet property="nameLabel" destination="wdY-D1-edU" id="0MJ-ll-z3a"/>
+                        <outlet property="profilePictureView" destination="gY2-Gh-p0I" id="sZM-Xh-4Zq"/>
+                        <outlet property="statusLabel" destination="EJ1-NE-ryq" id="1vO-fb-lfY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ras-gR-t28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="436"/>
+            <point key="canvasLocation" x="-2364" y="-732"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="0kA-DI-h9v">
@@ -271,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DTN-Ah-wet" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-691" y="124"/>
+            <point key="canvasLocation" x="-2211" y="-1404"/>
         </scene>
         <!--Navigation Controller - first-->
         <scene sceneID="EjR-CY-P9S">
@@ -290,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2s-S2-umH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="-633" y="12"/>
         </scene>
     </scenes>
     <resources>

@@ -16,15 +16,19 @@
     IBOutlet UIImageView *LostPhoto;
     IBOutlet UITextView *Comment;
     IBOutlet UIImageView  *testimageview;
+    IBOutlet UISegmentedControl *WhereSeg;
 
     
     UIImage *Sendimage;
     
     
     NSString *comstr;
+    
+    NSNumber *SegNum;
 
     
     int i;
+    int Seg;
 }
 -(IBAction)Photo;
 -(IBAction)SEND;

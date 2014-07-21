@@ -25,6 +25,11 @@
      */
     
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    WhereSeg.selectedSegmentIndex=3;
+    WhereSeg.momentary = YES;
+    [WhereSeg addTarget:self action:@selector(hoge:)forControlEvents:UIControlEventValueChanged];
+    
     Comment.delegate = self;
     Comment.text=@"(例)三鷹駅北口で拾いました。\n(例)三鷹駅の北口の交番に届けました。";
     Comment.keyboardType=UIKeyboardTypeDefault;
@@ -98,6 +103,9 @@
 
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
+    NSLog(@"%d",Seg);
+    SegNum = [NSNumber numberWithInt:Seg];
+    testObject[@"SegIndex"] = SegNum;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
     NSData *imageData = UIImagePNGRepresentation(Sendimage);
@@ -115,6 +123,8 @@
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
     Comment.text=@"";
     NSLog(@"っこここここk");
+    
+    
     /* PFObject *jobApplication = [PFObject objectWithClassName:@"JobApplication"];
      jobApplication[@"applicantName"] = @"Joe Smith";
      jobApplication[@"applicantResumeFile"] = imageFile;
@@ -190,6 +200,27 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 
     // キーボードを閉じる
     [self->Comment resignFirstResponder];
+}
+
+-(void)hoge{
+    NSLog(@"seg");
+    switch (WhereSeg.selectedSegmentIndex) {
+        case 0:
+            Seg = 0;
+            break;
+            
+        case 1:
+            Seg = 1;
+            break;
+            
+        case 2:
+            Seg = 2;
+            break;
+            
+        case 3:
+            Seg = 3;
+            break;
+    }
 }
 
 @end
