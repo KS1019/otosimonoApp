@@ -15,12 +15,15 @@
     IBOutlet UIImageView *lostPhotoView;
     
     int segue;
+    int cellcolor;
     
     UIImage *img;
 
     NSString *testr;
     NSString *str;
     NSString *comstr;
+    
+    NSNumber *CellColorNum;
     
     NSMutableArray *textarray;
     NSMutableArray *imagearray;

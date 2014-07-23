@@ -56,6 +56,10 @@
             NSLog(@"%@",str);
             str = [testobject objectForKey:@"foo"];
             
+            CellColorNum = [testobject objectForKey:@"SegIndex"];
+            cellcolor = [CellColorNum intValue];
+            
+            
             NSLog(@"str->%@",str);
             [textarray addObject:str];
             NSLog(@"textarray->%@",textarray);
@@ -105,10 +109,7 @@
     }
 }
 
--(void)o{
-    
 
-}
 
 
 
@@ -131,6 +132,21 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellIdentifier=@"Cell";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    switch (cellcolor) {
+        case 0:
+            cell.contentView.backgroundColor = [UIColor blueColor];
+            break;
+        case 1:
+            cell.contentView.backgroundColor = [UIColor greenColor];
+            break;
+        case 2:
+            cell.contentView.backgroundColor = [UIColor yellowColor];
+            break;
+        case 3:
+            cell.contentView.backgroundColor = [UIColor redColor];
+            break;
+    }
     
     if (!cell) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];

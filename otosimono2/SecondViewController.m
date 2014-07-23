@@ -27,8 +27,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     WhereSeg.selectedSegmentIndex=3;
-    WhereSeg.momentary = YES;
-    [WhereSeg addTarget:self action:@selector(hoge:)forControlEvents:UIControlEventValueChanged];
+    WhereSeg.momentary = NO;
+    [WhereSeg addTarget:self action:@selector(hoge)forControlEvents:UIControlEventValueChanged];
     
     Comment.delegate = self;
     Comment.text=@"(例)三鷹駅北口で拾いました。\n(例)三鷹駅の北口の交番に届けました。";
