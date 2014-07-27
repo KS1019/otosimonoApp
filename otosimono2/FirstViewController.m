@@ -44,8 +44,9 @@
 -(IBAction)refresh{
     NSLog(@"111111!!!!1");
     
-      textarray=[[NSMutableArray alloc] init];
+    textarray=[[NSMutableArray alloc] init];
     imagearray=[[NSMutableArray alloc]init];
+    CellColorArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"TestObject"];
     //query.skip = 0;
     //query.limit = 10; // limit to at most 10 results
@@ -57,7 +58,8 @@
             str = [testobject objectForKey:@"foo"];
             
             CellColorNum = [testobject objectForKey:@"SegIndex"];
-            cellcolor = [CellColorNum intValue];
+            //cellcolor = [CellColorNum intValue];
+            [CellColorArray addObject:CellColorNum];
             
             
             NSLog(@"str->%@",str);
@@ -133,7 +135,10 @@
     NSString *cellIdentifier=@"Cell";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    switch (cellcolor) {
+        if (!cell) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    /*switch (cellcolor) {
         case 0:
             cell.contentView.backgroundColor = [UIColor blueColor];
             break;
@@ -146,11 +151,10 @@
         case 3:
             cell.contentView.backgroundColor = [UIColor redColor];
             break;
-    }
-    
-    if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
+    }*/
+    //NSString *st = [CellColorArray objectAtIndex:indexPath.row];
+    //cell.contentView.backgroundColor = [UIColor ];
+
     cell.textLabel.text=[textarray objectAtIndex:indexPath.row];
     
     cell.imageView.backgroundColor = [UIColor grayColor];
@@ -166,6 +170,33 @@
     //cell.textLabel.text=@"あ";
 
     return cell;
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cellcolor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
+    switch (cellcolor) {
+        case 0:
+            cell.contentView.backgroundColor = [UIColor blueColor];
+            break;
+        case 1:
+            cell.contentView.backgroundColor = [UIColor greenColor];
+            break;
+        case 2:
+            cell.contentView.backgroundColor = [UIColor yellowColor];
+            break;
+        case 3:
+            cell.contentView.backgroundColor = [UIColor redColor];
+            break;
+    }
+   /* // For even
+    if (indexPath.row % 2 == 0) {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+    // For odd
+    else {
+        
+        cell.backgroundColor = RGB(235, 204, 255);
+    }*/
 }
 
 

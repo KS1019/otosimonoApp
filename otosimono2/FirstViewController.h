@@ -27,6 +27,7 @@
     
     NSMutableArray *textarray;
     NSMutableArray *imagearray;
+    NSMutableArray *CellColorArray;
     
     UIImage *passImage;
     

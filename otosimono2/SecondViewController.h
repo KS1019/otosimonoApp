@@ -24,11 +24,11 @@
     
     NSString *comstr;
     
-    NSNumber *SegNum;
+    NSNumber *colorSegNum;
 
     
     int i;
-    int Seg;
+    //int Seg;
 }
 -(IBAction)Photo;
 -(IBAction)SEND;

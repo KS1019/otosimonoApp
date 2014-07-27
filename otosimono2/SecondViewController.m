@@ -103,9 +103,9 @@
 
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
-    NSLog(@"%d",Seg);
-    SegNum = [NSNumber numberWithInt:Seg];
-    testObject[@"SegIndex"] = SegNum;
+    //NSLog(@"%d",Seg);
+    //SegNum = [NSNumber numberWithInt:Seg];
+    testObject[@"SegIndex"] = colorSegNum;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
     NSData *imageData = UIImagePNGRepresentation(Sendimage);
@@ -206,19 +206,20 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     NSLog(@"seg");
     switch (WhereSeg.selectedSegmentIndex) {
         case 0:
-            Seg = 0;
+            
+            colorSegNum =[NSNumber numberWithInt:0];
             break;
             
         case 1:
-            Seg = 1;
+            colorSegNum =[NSNumber numberWithInt:1];
             break;
             
         case 2:
-            Seg = 2;
+            colorSegNum =[NSNumber numberWithInt:2];
             break;
             
         case 3:
-            Seg = 3;
+            colorSegNum =[NSNumber numberWithInt:3];
             break;
     }
 }

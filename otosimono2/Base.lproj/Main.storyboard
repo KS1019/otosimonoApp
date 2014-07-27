@@ -137,16 +137,15 @@
                                     <action selector="SEND" destination="QUy-BD-bpt" eventType="touchUpInside" id="MLj-w1-Wra"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A3y-D7-jkB">
-                                <rect key="frame" x="7" y="418" width="307" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-ds-F0C">
+                                <rect key="frame" x="48" y="409" width="224" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="家"/>
-                                    <segment title="店舗等"/>
                                     <segment title="警察"/>
-                                    <segment title="?"/>
+                                    <segment title="店舗等"/>
+                                    <segment title="？"/>
                                 </segments>
-                                <color key="tintColor" red="0.13217776285858207" green="0.37062654751631996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -157,7 +156,7 @@
                     <connections>
                         <outlet property="Comment" destination="rnL-nI-8mc" id="8DQ-pU-BJg"/>
                         <outlet property="LostPhoto" destination="uJn-pd-cPu" id="7bt-WG-fBb"/>
-                        <outlet property="WhereSeg" destination="A3y-D7-jkB" id="R2q-IZ-YYj"/>
+                        <outlet property="WhereSeg" destination="Eg9-ds-F0C" id="vrc-94-rUJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
