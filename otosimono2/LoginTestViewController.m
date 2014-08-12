@@ -26,9 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.loginView.delegate = self;
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *bid = [bundle bundleIdentifier];
+    NSLog(@"%@",bid);
+    //self.loginView.delegate = self;
     self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
-
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -43,6 +47,8 @@
     self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
     
+
+    
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
@@ -54,7 +60,7 @@
 {
     self.statusLabel.text = @"You're not logged in!";
     //FIXME:
-    //self.profilePictureView.profileID = [];
+    //self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
 }
 
