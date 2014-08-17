@@ -8,6 +8,8 @@
 
 #import "SecondViewController.h"
 #import <ImageIO/ImageIO.h>
+#import <CoreLocation/CoreLocation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface SecondViewController ()
 
@@ -44,6 +46,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)r{
+    NSString *imgPath = [NSString stringWithFormat:@"%@",test, [[NSBundle mainBundle] resourcePath]];
+    CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)CFBridgingRetain([NSURL fileURLWithPath:imgPath]), nil);
+    
+    NSDictionary *metadata = (NSDictionary *) CFBridgingRelease(CGImageSourceCopyPropertiesAtIndex(source, 0, NULL));
+    
+    //GPS Dictionary
+    NSDictionary *GPSDictionary = [metadata objectForKey:(NSString *)kCGImagePropertyGPSDictionary];
+    NSLog(@"GPSDictionary==%@",GPSDictionary);
+    NSLog(@"%@",test);
 }
 -(IBAction)test{
    PFQuery *query = [PFQuery queryWithClassName:@"TestObject"];
@@ -164,8 +178,33 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 }
 -(void)imagePickerController:(UIImagePickerController*)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    NSLog(@"yeeeeeehhhhshs");
+
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
+    NSURL* imageurl = [info objectForKey:UIImagePickerControllerReferenceURL];
+    NSDictionary *metadata = [info objectForKey:UIImagePickerControllerMediaMetadata];
+    
+    if (imageurl) {
+        // ライブラリ内の写真を選択
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        ALAssetsLibraryAssetForURLResultBlock resultBlock = ^(ALAsset *asset) {
+            ALAssetRepresentation *representation;
+            representation = [asset defaultRepresentation];
+            NSDictionary *repMetadata = [representation metadata];
+            NSLog(@"metadata:%@",repMetadata);
+        };
+        
+        [library assetForURL:imageurl
+                 resultBlock:resultBlock
+                failureBlock:^(NSError *error){ NSLog(@"error:%@",error); }];
+    } else if (metadata) {
+        // カメラで撮影
+        NSLog(@"metadata:%@", metadata);
+    } else {
+        NSLog(@"error");
+    }
+
+    //test=imageurl;
+
   
 //    CGImageSourceRef source =image.image;
 //    NSData *photodata=image;
@@ -188,7 +227,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
         i=2;
     }
     
-    NSLog(@"っふうううう");
+
     return YES;
 }
 

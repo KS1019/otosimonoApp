@@ -18,18 +18,16 @@
     IBOutlet UIImageView  *testimageview;
     IBOutlet UISegmentedControl *WhereSeg;
 
-    
     UIImage *Sendimage;
     
-    
     NSString *comstr;
+    NSString *test;
     
     NSNumber *colorSegNum;
 
     
     int i;
-    //int Seg;
-}
+    }
 -(IBAction)Photo;
 -(IBAction)SEND;
 -(IBAction)test;
