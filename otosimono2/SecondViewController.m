@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import <ImageIO/ImageIO.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface SecondViewController ()
 
@@ -103,14 +104,12 @@
 
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
-    //NSLog(@"%d",Seg);
-    //SegNum = [NSNumber numberWithInt:Seg];
+    
     testObject[@"SegIndex"] = colorSegNum;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
     NSData *imageData = UIImagePNGRepresentation(Sendimage);
     
-    NSLog(@"Hey");
     PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     [imageFile save];
     NSLog(@"Hi");
@@ -122,7 +121,7 @@
     [LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
     Comment.text=@"";
-    NSLog(@"っこここここk");
+    
     
     
     /* PFObject *jobApplication = [PFObject objectWithClassName:@"JobApplication"];
@@ -166,7 +165,31 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 didFinishPickingMediaWithInfo:(NSDictionary *)info{
     NSLog(@"yeeeeeehhhhshs");
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
-  
+    NSURL* imageurl = [info objectForKey:UIImagePickerControllerReferenceURL];
+    NSDictionary *metadata = [info objectForKey:UIImagePickerControllerMediaMetadata];
+    
+    if (imageurl) {
+        // ライブラリ内の写真を選択
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        ALAssetsLibraryAssetForURLResultBlock resultBlock = ^(ALAsset *asset) {
+            ALAssetRepresentation *representation;
+            representation = [asset defaultRepresentation];
+            NSDictionary *repMetadata = [representation metadata];
+            NSLog(@"metadata:%@",repMetadata);
+            NSString *str = [repMetadata objectForKey:@"{GPS}"];
+            NSLog(@"%@",str);
+        };
+        
+        [library assetForURL:imageurl
+                 resultBlock:resultBlock
+                failureBlock:^(NSError *error){ NSLog(@"error:%@",error); }];
+    } else if (metadata) {
+        // カメラで撮影
+        NSLog(@"metadata:%@", metadata);
+    } else {
+        NSLog(@"error");
+    }
+
 //    CGImageSourceRef source =image.image;
 //    NSData *photodata=image;
 //    CGImageSourceRef cgImage = CGImageSourceCreateWithData((__bridge CFDataRef)photodata, nil);
@@ -188,7 +211,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
         i=2;
     }
     
-    NSLog(@"っふうううう");
+
     return YES;
 }
 
