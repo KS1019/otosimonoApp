@@ -178,6 +178,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
             NSLog(@"metadata:%@",repMetadata);
             NSString *str = [repMetadata objectForKey:@"{GPS}"];
             NSLog(@"%@",str);
+            //lll
         };
         
         [library assetForURL:imageurl
