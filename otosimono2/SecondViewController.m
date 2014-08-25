@@ -176,9 +176,41 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
             representation = [asset defaultRepresentation];
             NSDictionary *repMetadata = [representation metadata];
             NSLog(@"metadata:%@",repMetadata);
-            NSString *str = [repMetadata objectForKey:@"{GPS}"];
+            NSString *str = [[NSString alloc]init];
+            str = [repMetadata objectForKey:@"{GPS}"];
             NSLog(@"%@",str);
-            //lll
+            //NSString *str2 = [[NSString alloc]init];
+            //str2 = [str stringByReplacingOccurrencesOfString:@";" withString:@","];
+            //NSArray *exifArray = str2;
+            //int cnt = [exifArray count];
+            //NSLog(@"%@", cnt);
+            //NSRange range = [str rangeOfString:str];
+            //int AllLenth = range.length;
+            
+           /*
+           // 分割した結果を保持する変数
+            NSMutableDictionary *LongitudeandlatitudeDic = [[NSMutableDictionary alloc] init];
+            
+            // 分割対象の文字列
+            //NSString *params = @"name=Bob&age=26&sex=man";
+            
+            // 「」で分割する
+            NSArray *phrase = [str componentsSeparatedByString:@" "];
+            
+            // 続いて、一つずつ「=」で分割する
+            for (int i = 0; i < phrase.count; i++) {
+                NSString *param = [phrase objectAtIndex:i];
+                NSArray *items = [param componentsSeparatedByString:@"="];
+                NSString *key = [items objectAtIndex:0];
+                NSString *val = [items objectAtIndex:1];
+                [LongitudeandlatitudeDic setValue:val forKey:key];
+            }
+            NSString *Longitude = [LongitudeandlatitudeDic objectForKey:Longitude ];
+            NSString *Latitude = [LongitudeandlatitudeDic objectForKey:Latitude ];
+            
+            NSLog(@"%@",Longitude);
+            NSLog(@"%@",Latitude);
+           */
         };
         
         [library assetForURL:imageurl
