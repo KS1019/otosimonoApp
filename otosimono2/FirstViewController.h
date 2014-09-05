@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "showmoreViewController.h"
+#import "showmoreViewController.h"
 
 @interface FirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     IBOutlet UITableView *table;
     IBOutlet UIImageView *lostPhotoView;
+    IBOutlet UILabel *label;
     
     int segue;
     int cellcolor;
@@ -28,10 +30,15 @@
     NSMutableArray *textarray;
     NSMutableArray *imagearray;
     NSMutableArray *CellColorArray;
+    NSMutableArray *LatitudeArray;
+    NSMutableArray *LongitudeArray;
     
     UIImage *passImage;
     
     PFFile *testimage;
+    
+    double ShowLatitude;
+    double ShowLongitude;
 }
 -(IBAction)refresh;
 @end

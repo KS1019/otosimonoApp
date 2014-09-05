@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "ShowMapViewController.h"
 
 
 @interface showmoreViewController : UIViewController<UITextViewDelegate>{
@@ -17,10 +18,13 @@
     
     NSString *CommentString;
     
+    NSNumber *LatitudetoSMVC;
+    NSNumber *LongitudetoSMVC;
+    
 }
 @property(nonatomic)NSString *CommentString;
-
-
-
 @property(nonatomic)UIImage *showimage;
+@property(nonatomic)NSNumber *LatitudetoSMVC;
+@property(nonatomic)NSNumber *LongitudetoSMVC;
+
 @end

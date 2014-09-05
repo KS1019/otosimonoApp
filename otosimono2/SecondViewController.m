@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 #import <ImageIO/ImageIO.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface SecondViewController ()
 
@@ -16,9 +18,14 @@
 
 @implementation SecondViewController
 
+@synthesize LatitudeDouble2;
+@synthesize LongitudeDouble2;
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Second VC viewDidLoad");
     /*
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] = @"bar";
@@ -28,6 +35,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     WhereSeg.selectedSegmentIndex=3;
+    colorSegNum =[NSNumber numberWithInt:3];
     WhereSeg.momentary = NO;
     [WhereSeg addTarget:self action:@selector(hoge)forControlEvents:UIControlEventValueChanged];
     
@@ -46,6 +54,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 -(IBAction)test{
    PFQuery *query = [PFQuery queryWithClassName:@"TestObject"];
    query.skip = 0;
@@ -106,6 +116,11 @@
     testObject[@"foo"] =Comment.text;
     
     testObject[@"SegIndex"] = colorSegNum;
+    
+    NSNumber *LatitudeNumber = [NSNumber numberWithDouble:LatitudeDouble2];
+    testObject[@"LatitudeNum"] =LatitudeNumber;
+    NSNumber *LongitudeNumber = [NSNumber numberWithDouble:LongitudeDouble2];
+    testObject[@"LongitudeNum"] = LongitudeNumber;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
     NSData *imageData = UIImagePNGRepresentation(Sendimage);
@@ -176,41 +191,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
             representation = [asset defaultRepresentation];
             NSDictionary *repMetadata = [representation metadata];
             NSLog(@"metadata:%@",repMetadata);
-            NSString *str = [[NSString alloc]init];
-            str = [repMetadata objectForKey:@"{GPS}"];
-            NSLog(@"%@",str);
-            //NSString *str2 = [[NSString alloc]init];
-            //str2 = [str stringByReplacingOccurrencesOfString:@";" withString:@","];
-            //NSArray *exifArray = str2;
-            //int cnt = [exifArray count];
-            //NSLog(@"%@", cnt);
-            //NSRange range = [str rangeOfString:str];
-            //int AllLenth = range.length;
+            NSDictionary *GPSData = [repMetadata objectForKey:@"{GPS}"];
+            LatitudeNum = [GPSData objectForKey:@"Latitude"];
+            LongitudeNum = [GPSData objectForKey:@"Longitude"];
+            NSLog(@"Latitude is %@",LatitudeNum);
+            NSLog(@"Longitude is %@",LongitudeNum);
+            LatitudeDouble2 = [LatitudeNum doubleValue];
+            LongitudeDouble2 = [LongitudeNum doubleValue];
             
-           /*
-           // 分割した結果を保持する変数
-            NSMutableDictionary *LongitudeandlatitudeDic = [[NSMutableDictionary alloc] init];
-            
-            // 分割対象の文字列
-            //NSString *params = @"name=Bob&age=26&sex=man";
-            
-            // 「」で分割する
-            NSArray *phrase = [str componentsSeparatedByString:@" "];
-            
-            // 続いて、一つずつ「=」で分割する
-            for (int i = 0; i < phrase.count; i++) {
-                NSString *param = [phrase objectAtIndex:i];
-                NSArray *items = [param componentsSeparatedByString:@"="];
-                NSString *key = [items objectAtIndex:0];
-                NSString *val = [items objectAtIndex:1];
-                [LongitudeandlatitudeDic setValue:val forKey:key];
-            }
-            NSString *Longitude = [LongitudeandlatitudeDic objectForKey:Longitude ];
-            NSString *Latitude = [LongitudeandlatitudeDic objectForKey:Latitude ];
-            
-            NSLog(@"%@",Longitude);
-            NSLog(@"%@",Latitude);
-           */
         };
         
         [library assetForURL:imageurl
@@ -222,16 +210,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     } else {
         NSLog(@"error");
     }
-
-//    CGImageSourceRef source =image.image;
-//    NSData *photodata=image;
-//    CGImageSourceRef cgImage = CGImageSourceCreateWithData((__bridge CFDataRef)photodata, nil);
-//    NSDictionary *metadata = (__bridge NSDictionary *)CGImageSourceCopyPropertiesAtIndex(cgImage, 0, nil);
-//    if (metadata) {
-//        NSLog(@"%@", [metadata description]);
-//    } else {
-//        NSLog(@"no metadata");
-//    }
 
     [LostPhoto setImage:image];
     Sendimage=image;
@@ -278,6 +256,80 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
             colorSegNum =[NSNumber numberWithInt:3];
             break;
     }
+}
+-(IBAction)MapTest{
+    UIAlertView*alert = [[UIAlertView alloc]init];
+    alert.title = @"位置情報";
+    alert.message = @"どのように取得しますか？";
+    alert.delegate = self;
+    [alert addButtonWithTitle:@"写真情報から"];
+    [alert addButtonWithTitle:@"マップにピンをうつ"];
+    [alert addButtonWithTitle:@"現在位置情報から"];
+    [alert addButtonWithTitle:@"キャンセル"];
+    [alert show];
+                       
+}
+
+-(void)alertView:(UIAlertView*)alert
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"-(void)alertView is faster");
+    switch (buttonIndex) {
+        case 0:{
+            NSLog(@"case is 0");
+            //１番目のボタンが押されたときの処理を記述する
+            AlertNum2 = 0;
+            [self performSelector:@selector(Segue) withObject:nil afterDelay:1.0];
+                        break;
+        }
+        case 1:{
+            NSLog(@"case is 1");
+            //２番目のボタンが押されたときの処理を記述する
+            AlertNum2 = 1;
+            [self performSelector:@selector(Segue) withObject:nil afterDelay:1.0];
+                       break;
+        }
+        case 2:{
+            NSLog(@"case is 2");
+            //３番目
+            AlertNum2 = 2;
+            [self performSelector:@selector(Segue) withObject:nil afterDelay:3.0];
+            break;
+        }
+    }
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    MapViewController *MVVC = segue.destinationViewController;
+    NSLog(@"%d",AlertNum2);
+    NSLog(@"prepareForSegue is faster");
+        if ([segue.identifier isEqualToString:@"MapSegue"]) {
+            NSLog(@"OK");
+            if (AlertNum2 == 0) {
+                NSLog(@"AlertNum2 = 0");
+        MVVC.LatitudeNum2 = LatitudeNum;
+        MVVC.LongitudeNum2 = LongitudeNum;
+        MVVC.AlertNum = 0;
+        }else if (AlertNum2 == 1){
+            NSLog(@"AlertNum2 = 1");
+            MVVC.LatitudeNum2 = 0;
+            MVVC.LongitudeNum2 = 0;
+            MVVC.AlertNum = 1;
+        }else if(AlertNum2 == 2){
+            NSLog(@"AlertNum2 = 2");
+            MVVC.LatitudeNum2 = 0;
+            MVVC.LongitudeNum2 = 0;
+            MVVC.AlertNum = 2;
+        }
+    }
+    
+}
+
+-(void)Segue{
+   /* SecondViewController *SVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Map View Controller"];
+    [self presentViewController:SVC animated:YES completion:nil];
+*/
+    [self performSegueWithIdentifier:@"MapSegue" sender:nil];
 }
 
 @end

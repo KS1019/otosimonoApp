@@ -17,6 +17,8 @@
 
 @synthesize showimage;
 @synthesize CommentString;
+@synthesize LatitudetoSMVC;
+@synthesize LongitudetoSMVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +45,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     if ([segue.identifier isEqualToString:@"ToMap"]) {
+         ShowMapViewController *SMVC = segue.destinationViewController;
+         SMVC.LatitudeNum2 = LatitudetoSMVC;
+         SMVC.LongitudeNum2 = LongitudetoSMVC;
+     }
 }
 
 /*

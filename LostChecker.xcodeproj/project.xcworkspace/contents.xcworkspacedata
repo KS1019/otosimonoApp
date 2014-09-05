@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:otosimono2.xcodeproj">
+      location = "self:LostChecker.xcodeproj">
    </FileRef>
 </Workspace>

@@ -8,19 +8,6 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>FacebookAppID</key>
-	<string>675554062500348</string>
-	<key>FacebookDisplayName</key>
-	<string>otosimono</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb675554062500348</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.litech.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -33,8 +20,21 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb675554062500348</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>675554062500348</string>
+	<key>FacebookDisplayName</key>
+	<string>otosimono</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -47,10 +47,10 @@
 	<dict>
 		<key>UINavigationBar</key>
 		<dict>
-			<key>Style</key>
-			<string>UIBarStyleDefault</string>
 			<key>BackgroundImage</key>
 			<string></string>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
 			<key>Translucent</key>
 			<false/>
 		</dict>
@@ -58,8 +58,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

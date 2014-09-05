@@ -34,11 +34,11 @@
 		7C35E89C19160E6000CC0573 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E89B19160E6000CC0573 /* MobileCoreServices.framework */; };
 		7C35E89E19160E6E00CC0573 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E89D19160E6E00CC0573 /* QuartzCore.framework */; };
 		7C35E8A019160E7B00CC0573 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E89F19160E7B00CC0573 /* Security.framework */; };
-		7C35E8A219160E8B00CC0573 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8A119160E8B00CC0573 /* StoreKit.framework */; };
 		7C35E8A419160E9900CC0573 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8A319160E9900CC0573 /* SystemConfiguration.framework */; };
 		7C35E8D71916210D00CC0573 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8D61916210D00CC0573 /* Parse.framework */; };
 		7C39518819AA26B900C46071 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C39518719AA26B900C46071 /* AssetsLibrary.framework */; };
-		7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D9F511941E05D0030F992 /* ShowViewController.m */; };
+		7C39518A19ACEA2900C46071 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C39518919ACEA2900C46071 /* MapKit.framework */; };
+		7C39518D19AE4AFB00C46071 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C39518C19AE4AFB00C46071 /* MapViewController.m */; };
 		7C956BBB1973BC3D004E5D1B /* LoginTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */; };
 		7C956BDC1973BDFF004E5D1B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C956BBD1973BDFF004E5D1B /* FacebookSDK.framework */; };
 		7C956BDD1973BDFF004E5D1B /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C956BBF1973BDFF004E5D1B /* FBAudienceNetwork.framework */; };
@@ -48,6 +48,8 @@
 		7CACD5791954554E009A1510 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACD4271954554D009A1510 /* FacebookSDK.framework */; };
 		7CACD57A1954554E009A1510 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACD4291954554D009A1510 /* FBAudienceNetwork.framework */; };
 		7CAFDCAA194C8220005EE1CD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAFDCA9194C8220005EE1CD /* ImageIO.framework */; };
+		7CB70E4419B2642E00561C0A /* ShowMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB70E4319B2642E00561C0A /* ShowMapViewController.m */; };
+		7CB70E4819B7180B00561C0A /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB70E4719B7180B00561C0A /* icon2.png */; };
 		7CFBA4C719389F5F008B58C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CFBA4C419389F5F008B58C0 /* SVProgressHUD.bundle */; };
 		7CFBA4C819389F5F008B58C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFBA4C619389F5F008B58C0 /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
@@ -68,14 +70,14 @@
 		7C116BC419186C2C00ADF2F3 /* SENDBTN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SENDBTN.png; sourceTree = "<group>"; };
 		7C116BC819186FF500ADF2F3 /* TOUKOU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU.png; sourceTree = "<group>"; };
 		7C116BCA1918711100ADF2F3 /* TOUKOU2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU2.png; sourceTree = "<group>"; };
-		7C35E8561915CA5600CC0573 /* otosimono2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = otosimono2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C35E8561915CA5600CC0573 /* LostChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35E8591915CA5600CC0573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C35E85B1915CA5600CC0573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7C35E85D1915CA5600CC0573 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7C35E8611915CA5600CC0573 /* otosimono2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "otosimono2-Info.plist"; sourceTree = "<group>"; };
+		7C35E8611915CA5600CC0573 /* LostChecker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostChecker-Info.plist"; sourceTree = "<group>"; };
 		7C35E8631915CA5600CC0573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C35E8651915CA5600CC0573 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C35E8671915CA5600CC0573 /* otosimono2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "otosimono2-Prefix.pch"; sourceTree = "<group>"; };
+		7C35E8671915CA5600CC0573 /* LostChecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LostChecker-Prefix.pch"; sourceTree = "<group>"; };
 		7C35E8681915CA5600CC0573 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C35E8691915CA5600CC0573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7C35E86C1915CA5600CC0573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,9 +86,9 @@
 		7C35E8711915CA5600CC0573 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		7C35E8721915CA5600CC0573 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		7C35E8741915CA5600CC0573 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7C35E87A1915CA5600CC0573 /* otosimono2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = otosimono2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C35E87A1915CA5600CC0573 /* LostCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35E87B1915CA5600CC0573 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		7C35E8831915CA5600CC0573 /* otosimono2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "otosimono2Tests-Info.plist"; sourceTree = "<group>"; };
+		7C35E8831915CA5600CC0573 /* LostCheckerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostCheckerTests-Info.plist"; sourceTree = "<group>"; };
 		7C35E8851915CA5600CC0573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C35E8871915CA5600CC0573 /* otosimono2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = otosimono2Tests.m; sourceTree = "<group>"; };
 		7C35E89319160E0800CC0573 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -96,12 +98,12 @@
 		7C35E89B19160E6000CC0573 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7C35E89D19160E6E00CC0573 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C35E89F19160E7B00CC0573 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		7C35E8A119160E8B00CC0573 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7C35E8A319160E9900CC0573 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7C35E8D61916210D00CC0573 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7C39518719AA26B900C46071 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		7C7D9F501941E05D0030F992 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
-		7C7D9F511941E05D0030F992 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		7C39518919ACEA2900C46071 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7C39518B19AE4AFB00C46071 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7C39518C19AE4AFB00C46071 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7C956BB91973BC3D004E5D1B /* LoginTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTestViewController.h; sourceTree = "<group>"; };
 		7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTestViewController.m; sourceTree = "<group>"; };
 		7C956BBD1973BDFF004E5D1B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -114,6 +116,9 @@
 		7CACD4271954554D009A1510 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		7CACD4291954554D009A1510 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../FacebookSDK/FBAudienceNetwork/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		7CAFDCA9194C8220005EE1CD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		7CB70E4219B2642E00561C0A /* ShowMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMapViewController.h; sourceTree = "<group>"; };
+		7CB70E4319B2642E00561C0A /* ShowMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMapViewController.m; sourceTree = "<group>"; };
+		7CB70E4719B7180B00561C0A /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		7CFBA4C319389F5F008B58C0 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		7CFBA4C419389F5F008B58C0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		7CFBA4C519389F5F008B58C0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C39518A19ACEA2900C46071 /* MapKit.framework in Frameworks */,
 				7C39518819AA26B900C46071 /* AssetsLibrary.framework in Frameworks */,
 				7CAFDCAA194C8220005EE1CD /* ImageIO.framework in Frameworks */,
 				7C35E89819160E2A00CC0573 /* CoreLocation.framework in Frameworks */,
@@ -132,7 +138,6 @@
 				7C35E89619160E1500CC0573 /* CFNetwork.framework in Frameworks */,
 				7C35E89419160E0800CC0573 /* AudioToolbox.framework in Frameworks */,
 				7C35E8A419160E9900CC0573 /* SystemConfiguration.framework in Frameworks */,
-				7C35E8A219160E8B00CC0573 /* StoreKit.framework in Frameworks */,
 				7CACD57A1954554E009A1510 /* FBAudienceNetwork.framework in Frameworks */,
 				7C956BDC1973BDFF004E5D1B /* FacebookSDK.framework in Frameworks */,
 				7C35E8D71916210D00CC0573 /* Parse.framework in Frameworks */,
@@ -163,6 +168,7 @@
 		7C35E84D1915CA5600CC0573 = {
 			isa = PBXGroup;
 			children = (
+				7CB70E4719B7180B00561C0A /* icon2.png */,
 				7C956BBC1973BDFF004E5D1B /* FacebookSDK */,
 				7CFBA4C219389F5F008B58C0 /* SVProgressHUD */,
 				7C079555192F5C8B0074A869 /* CAMERABTN.png */,
@@ -180,8 +186,8 @@
 		7C35E8571915CA5600CC0573 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C35E8561915CA5600CC0573 /* otosimono2.app */,
-				7C35E87A1915CA5600CC0573 /* otosimono2Tests.xctest */,
+				7C35E8561915CA5600CC0573 /* LostChecker.app */,
+				7C35E87A1915CA5600CC0573 /* LostCheckerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,13 +195,13 @@
 		7C35E8581915CA5600CC0573 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C39518919ACEA2900C46071 /* MapKit.framework */,
 				7C39518719AA26B900C46071 /* AssetsLibrary.framework */,
 				7CACD4291954554D009A1510 /* FBAudienceNetwork.framework */,
 				7CACD4271954554D009A1510 /* FacebookSDK.framework */,
 				7CAFDCA9194C8220005EE1CD /* ImageIO.framework */,
 				7C35E8D61916210D00CC0573 /* Parse.framework */,
 				7C35E8A319160E9900CC0573 /* SystemConfiguration.framework */,
-				7C35E8A119160E8B00CC0573 /* StoreKit.framework */,
 				7C35E89F19160E7B00CC0573 /* Security.framework */,
 				7C35E89D19160E6E00CC0573 /* QuartzCore.framework */,
 				7C35E89B19160E6000CC0573 /* MobileCoreServices.framework */,
@@ -217,18 +223,20 @@
 				7C35E8681915CA5600CC0573 /* AppDelegate.h */,
 				7C35E8691915CA5600CC0573 /* AppDelegate.m */,
 				7C35E86B1915CA5600CC0573 /* Main.storyboard */,
+				7CB70E4219B2642E00561C0A /* ShowMapViewController.h */,
+				7CB70E4319B2642E00561C0A /* ShowMapViewController.m */,
 				7C956BB91973BC3D004E5D1B /* LoginTestViewController.h */,
 				7C956BBA1973BC3D004E5D1B /* LoginTestViewController.m */,
 				7CAC69BB195D809D009222DF /* loginViewController.h */,
 				7CAC69BC195D809D009222DF /* loginViewController.m */,
 				7CACD4231954527B009A1510 /* showmoreViewController.h */,
 				7CACD4241954527B009A1510 /* showmoreViewController.m */,
-				7C7D9F501941E05D0030F992 /* ShowViewController.h */,
-				7C7D9F511941E05D0030F992 /* ShowViewController.m */,
 				7C35E86E1915CA5600CC0573 /* FirstViewController.h */,
 				7C35E86F1915CA5600CC0573 /* FirstViewController.m */,
 				7C35E8711915CA5600CC0573 /* SecondViewController.h */,
 				7C35E8721915CA5600CC0573 /* SecondViewController.m */,
+				7C39518B19AE4AFB00C46071 /* MapViewController.h */,
+				7C39518C19AE4AFB00C46071 /* MapViewController.m */,
 				7CA51EE319176A6C001BAF56 /* icon256@2x.png */,
 				7C35E8741915CA5600CC0573 /* Images.xcassets */,
 				7C35E8601915CA5600CC0573 /* Supporting Files */,
@@ -239,10 +247,10 @@
 		7C35E8601915CA5600CC0573 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C35E8611915CA5600CC0573 /* otosimono2-Info.plist */,
+				7C35E8611915CA5600CC0573 /* LostChecker-Info.plist */,
 				7C35E8621915CA5600CC0573 /* InfoPlist.strings */,
 				7C35E8651915CA5600CC0573 /* main.m */,
-				7C35E8671915CA5600CC0573 /* otosimono2-Prefix.pch */,
+				7C35E8671915CA5600CC0573 /* LostChecker-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,7 +267,7 @@
 		7C35E8821915CA5600CC0573 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C35E8831915CA5600CC0573 /* otosimono2Tests-Info.plist */,
+				7C35E8831915CA5600CC0573 /* LostCheckerTests-Info.plist */,
 				7C35E8841915CA5600CC0573 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -522,9 +530,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7C35E8551915CA5600CC0573 /* otosimono2 */ = {
+		7C35E8551915CA5600CC0573 /* LostChecker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C35E88B1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "otosimono2" */;
+			buildConfigurationList = 7C35E88B1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "LostChecker" */;
 			buildPhases = (
 				7C35E8521915CA5600CC0573 /* Sources */,
 				7C35E8531915CA5600CC0573 /* Frameworks */,
@@ -534,14 +542,14 @@
 			);
 			dependencies = (
 			);
-			name = otosimono2;
+			name = LostChecker;
 			productName = otosimono2;
-			productReference = 7C35E8561915CA5600CC0573 /* otosimono2.app */;
+			productReference = 7C35E8561915CA5600CC0573 /* LostChecker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7C35E8791915CA5600CC0573 /* otosimono2Tests */ = {
+		7C35E8791915CA5600CC0573 /* LostCheckerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C35E88E1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "otosimono2Tests" */;
+			buildConfigurationList = 7C35E88E1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "LostCheckerTests" */;
 			buildPhases = (
 				7C35E8761915CA5600CC0573 /* Sources */,
 				7C35E8771915CA5600CC0573 /* Frameworks */,
@@ -552,9 +560,9 @@
 			dependencies = (
 				7C35E8801915CA5600CC0573 /* PBXTargetDependency */,
 			);
-			name = otosimono2Tests;
+			name = LostCheckerTests;
 			productName = otosimono2Tests;
-			productReference = 7C35E87A1915CA5600CC0573 /* otosimono2Tests.xctest */;
+			productReference = 7C35E87A1915CA5600CC0573 /* LostCheckerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -568,13 +576,18 @@
 				TargetAttributes = {
 					7C35E8551915CA5600CC0573 = {
 						DevelopmentTeam = 9KDPSC6W9G;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					7C35E8791915CA5600CC0573 = {
 						TestTargetID = 7C35E8551915CA5600CC0573;
 					};
 				};
 			};
-			buildConfigurationList = 7C35E8511915CA5600CC0573 /* Build configuration list for PBXProject "otosimono2" */;
+			buildConfigurationList = 7C35E8511915CA5600CC0573 /* Build configuration list for PBXProject "LostChecker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -588,8 +601,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7C35E8551915CA5600CC0573 /* otosimono2 */,
-				7C35E8791915CA5600CC0573 /* otosimono2Tests */,
+				7C35E8551915CA5600CC0573 /* LostChecker */,
+				7C35E8791915CA5600CC0573 /* LostCheckerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -606,6 +619,7 @@
 				7C116BCB1918711100ADF2F3 /* TOUKOU2.png in Resources */,
 				7CFBA4C719389F5F008B58C0 /* SVProgressHUD.bundle in Resources */,
 				7CA51EE419176A6C001BAF56 /* icon256@2x.png in Resources */,
+				7CB70E4819B7180B00561C0A /* icon2.png in Resources */,
 				7C079556192F5C8B0074A869 /* CAMERABTN.png in Resources */,
 				7C35E86D1915CA5600CC0573 /* Main.storyboard in Resources */,
 				7C116BC519186C2C00ADF2F3 /* SENDBTN.png in Resources */,
@@ -634,8 +648,9 @@
 				7C35E8661915CA5600CC0573 /* main.m in Sources */,
 				7CAC69BD195D809D009222DF /* loginViewController.m in Sources */,
 				7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */,
+				7CB70E4419B2642E00561C0A /* ShowMapViewController.m in Sources */,
+				7C39518D19AE4AFB00C46071 /* MapViewController.m in Sources */,
 				7C956BBB1973BC3D004E5D1B /* LoginTestViewController.m in Sources */,
-				7C7D9F521941E05D0030F992 /* ShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +667,7 @@
 /* Begin PBXTargetDependency section */
 		7C35E8801915CA5600CC0573 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7C35E8551915CA5600CC0573 /* otosimono2 */;
+			target = 7C35E8551915CA5600CC0573 /* LostChecker */;
 			targetProxy = 7C35E87F1915CA5600CC0573 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -773,9 +788,9 @@
 					/Users/kotarosuto/Desktop/FacebookSDK/FBAudienceNetwork,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "otosimono2/otosimono2-Prefix.pch";
-				INFOPLIST_FILE = "otosimono2/otosimono2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "otosimono2/LostChecker-Prefix.pch";
+				INFOPLIST_FILE = "otosimono2/LostChecker-Info.plist";
+				PRODUCT_NAME = LostChecker;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -797,9 +812,9 @@
 					/Users/kotarosuto/Desktop/FacebookSDK/FBAudienceNetwork,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "otosimono2/otosimono2-Prefix.pch";
-				INFOPLIST_FILE = "otosimono2/otosimono2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "otosimono2/LostChecker-Prefix.pch";
+				INFOPLIST_FILE = "otosimono2/LostChecker-Info.plist";
+				PRODUCT_NAME = LostChecker;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -820,8 +835,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "otosimono2Tests/otosimono2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "otosimono2Tests/LostCheckerTests-Info.plist";
+				PRODUCT_NAME = LostCheckerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -838,8 +853,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "otosimono2/otosimono2-Prefix.pch";
-				INFOPLIST_FILE = "otosimono2Tests/otosimono2Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "otosimono2Tests/LostCheckerTests-Info.plist";
+				PRODUCT_NAME = LostCheckerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -848,7 +863,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7C35E8511915CA5600CC0573 /* Build configuration list for PBXProject "otosimono2" */ = {
+		7C35E8511915CA5600CC0573 /* Build configuration list for PBXProject "LostChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C35E8891915CA5600CC0573 /* Debug */,
@@ -857,7 +872,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C35E88B1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "otosimono2" */ = {
+		7C35E88B1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "LostChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C35E88C1915CA5600CC0573 /* Debug */,
@@ -866,7 +881,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C35E88E1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "otosimono2Tests" */ = {
+		7C35E88E1915CA5600CC0573 /* Build configuration list for PBXNativeTarget "LostCheckerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C35E88F1915CA5600CC0573 /* Debug */,
