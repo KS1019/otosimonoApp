@@ -188,7 +188,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-et-cXa">
                                 <rect key="frame" x="68" y="440" width="189" height="71"/>
-                                <state key="normal" image="Moc02.png">
+                                <state key="normal" image="MOC-02.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -205,16 +205,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSY-f6-6cr">
-                                <rect key="frame" x="22" y="323" width="280" height="48"/>
-                                <color key="backgroundColor" white="0.72171532846715325" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="Moc04.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="MapTest" destination="QUy-BD-bpt" eventType="touchUpInside" id="tdt-3a-WiM"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjI-iU-FN7">
                                 <rect key="frame" x="20" y="30" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -227,6 +217,15 @@
                                 </state>
                                 <connections>
                                     <action selector="Photo" destination="QUy-BD-bpt" eventType="touchUpInside" id="7yK-3r-ME5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSY-f6-6cr">
+                                <rect key="frame" x="20" y="326" width="280" height="48"/>
+                                <state key="normal" image="MOC-04.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MapTest" destination="QUy-BD-bpt" eventType="touchUpInside" id="tdt-3a-WiM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -288,8 +287,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Moc02.png" width="508" height="189"/>
-        <image name="Moc04.png" width="554" height="97"/>
+        <image name="MOC-02.png" width="508" height="189"/>
+        <image name="MOC-04.png" width="554" height="97"/>
         <image name="Moc07.png" width="658" height="1154"/>
         <image name="TOUKOU2.png" width="208" height="182"/>
         <image name="first" width="30" height="30"/>

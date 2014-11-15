@@ -46,7 +46,7 @@
     i=1;
       //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
-    UIImage *Showimage = [UIImage imageNamed:@"Moc03.png"];
+    UIImage *Showimage = [UIImage imageNamed:@"MOC-03.png"];
     [PhotoSelect setBackgroundImage:Showimage forState:UIControlStateNormal];
 }
 
