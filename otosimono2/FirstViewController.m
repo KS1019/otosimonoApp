@@ -21,6 +21,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self refresh];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *bid = [bundle bundleIdentifier];
+    NSLog(@"---------->>>>>%@",bid);
 
     
 }

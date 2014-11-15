@@ -16,9 +16,11 @@
 
 @interface SecondViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UIActionSheetDelegate,UIAlertViewDelegate,MKMapViewDelegate>{
     IBOutlet UIImageView *LostPhoto;
-    IBOutlet UITextView *Comment;
+    //IBOutlet UITextView *Comment;
+    IBOutlet UITextField *Comment;
     IBOutlet UIImageView  *testimageview;
     IBOutlet UISegmentedControl *WhereSeg;
+    IBOutlet UIButton *PhotoSelect;
 
     
     UIImage *Sendimage;

@@ -40,13 +40,14 @@
     [WhereSeg addTarget:self action:@selector(hoge)forControlEvents:UIControlEventValueChanged];
     
     Comment.delegate = self;
-    Comment.text=@"(例)三鷹駅北口で拾いました。\n(例)三鷹駅の北口の交番に届けました。";
-    Comment.keyboardType=UIKeyboardTypeDefault;
+    Comment.placeholder = @"コメントを入力";
+    Comment.keyboardType = UIKeyboardTypeDefault;
+    Comment.borderStyle = UITextBorderStyleLine;
     i=1;
-      [LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
+      //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
-    
-
+    UIImage *Showimage = [UIImage imageNamed:@"Moc03.png"];
+    [PhotoSelect setBackgroundImage:Showimage forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +109,10 @@
 -(IBAction)SEND{
         [SVProgressHUD show];
     [self performSelector:@selector(sv) withObject:nil afterDelay:2.0];
+    
+    NSLog(@"############ %f ###############",LatitudeDouble2);
+    NSLog(@"############ %f ###############",LongitudeDouble2);
+
 }
 
 -(void)sv{
@@ -133,7 +138,8 @@
     [testObject saveInBackground];
     
     
-    [LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
+    //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
+    
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
     Comment.text=@"";
     
@@ -211,7 +217,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
         NSLog(@"error");
     }
 
-    [LostPhoto setImage:image];
+    //[LostPhoto setImage:image];
+    [PhotoSelect setBackgroundImage:image forState:UIControlStateNormal];
     Sendimage=image;
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -330,6 +337,10 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self presentViewController:SVC animated:YES completion:nil];
 */
     [self performSegueWithIdentifier:@"MapSegue" sender:nil];
+}
+-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+    [Comment resignFirstResponder];
+    return YES;
 }
 
 @end
