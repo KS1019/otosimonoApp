@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //88888888888888888
     NSLog(@"Second VC viewDidLoad");
     /*
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
