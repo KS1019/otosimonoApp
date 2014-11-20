@@ -118,6 +118,7 @@
 
 -(void)sv{
     //ACLの設定をする。
+    //
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
     
