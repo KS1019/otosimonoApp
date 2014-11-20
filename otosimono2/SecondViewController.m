@@ -117,7 +117,7 @@
 }
 
 -(void)sv{
-
+    //ACLの設定をする。
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
     
@@ -137,7 +137,7 @@
     //testObject[@"imageFile"] = imageFile;
     [testObject setObject:imageFile forKey:@"image"];
     [testObject saveInBackground];
-    
+    //[testObject save];
     
     //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     
