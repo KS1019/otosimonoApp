@@ -19,9 +19,9 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFUser enableAutomaticUser];
     
-    PFACL *defaultACL = [PFACL ACL];
-    
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    //この文を書くとACLが適用される。
+    //PFACL *defaultACL = [PFACL ACL];
+    //[PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Facebook
     [PFFacebookUtils initializeFacebook];
