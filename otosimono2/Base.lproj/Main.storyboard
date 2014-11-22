@@ -79,23 +79,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4S6-w8-I2b">
-                                <rect key="frame" x="20" y="68" width="291" height="212"/>
+                                <rect key="frame" x="-1" y="-2" width="1" height="2"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WiG-B6-pzD">
-                                <rect key="frame" x="20" y="304" width="280" height="99"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCq-EO-DfK">
-                                <rect key="frame" x="130" y="446" width="60" height="30"/>
-                                <state key="normal" title="位置情報">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCq-EO-DfK">
+                                <rect key="frame" x="64" y="450" width="192" height="61"/>
+                                <state key="normal" image="MOC-10.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="aBY-Hj-jFK" kind="modal" identifier="ToMap" id="Zm3-tg-eqK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moc07.png" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-lD-UsI">
+                                <rect key="frame" x="-2" y="0.0" width="325" height="575"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -107,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLO-p2-RDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117" y="-930"/>
+            <point key="canvasLocation" x="-101" y="-746"/>
         </scene>
         <!--Show Map View Controller-->
         <scene sceneID="1Tk-Wl-qwp">
@@ -195,16 +197,6 @@
                                     <action selector="SEND" destination="QUy-BD-bpt" eventType="touchUpInside" id="MLj-w1-Wra"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-ds-F0C">
-                                <rect key="frame" x="48" y="397" width="224" height="29"/>
-                                <segments>
-                                    <segment title="家"/>
-                                    <segment title="警察"/>
-                                    <segment title="店舗等"/>
-                                    <segment title="？"/>
-                                </segments>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjI-iU-FN7">
                                 <rect key="frame" x="20" y="30" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -220,7 +212,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSY-f6-6cr">
-                                <rect key="frame" x="20" y="326" width="280" height="48"/>
+                                <rect key="frame" x="16" y="285" width="280" height="48"/>
                                 <state key="normal" image="MOC-04.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -228,6 +220,22 @@
                                     <action selector="MapTest" destination="QUy-BD-bpt" eventType="touchUpInside" id="tdt-3a-WiM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="預かっている場所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHX-Ph-ZDL">
+                                <rect key="frame" x="20" y="350" width="145" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-ds-F0C">
+                                <rect key="frame" x="20" y="379" width="270" height="29"/>
+                                <segments>
+                                    <segment title="家"/>
+                                    <segment title="警察"/>
+                                    <segment title="店舗等"/>
+                                    <segment title="？"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -274,7 +282,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.34248498449999998" green="1" blue="0.62899407939999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -289,6 +297,7 @@
     <resources>
         <image name="MOC-02.png" width="508" height="189"/>
         <image name="MOC-04.png" width="554" height="97"/>
+        <image name="MOC-10.png" width="554" height="97"/>
         <image name="Moc07.png" width="658" height="1154"/>
         <image name="TOUKOU2.png" width="208" height="182"/>
         <image name="first" width="30" height="30"/>
