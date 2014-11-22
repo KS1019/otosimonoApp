@@ -49,7 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="投稿一覧" id="Qhd-gN-LS6">
+                    <navigationItem key="navigationItem" title="一覧" id="Qhd-gN-LS6">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="tgD-1y-f5d">
                             <connections>
                                 <action selector="refresh" destination="CZ4-MO-1fc" id="xLB-UY-uTK"/>
@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="-904"/>
+            <point key="canvasLocation" x="-1623" y="-864"/>
         </scene>
         <!--Showmore View Controller-->
         <scene sceneID="ZJM-fi-W2W">
@@ -78,38 +78,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4S6-w8-I2b">
-                                <rect key="frame" x="-1" y="-2" width="1" height="2"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moc07.png" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-lD-UsI">
+                                <rect key="frame" x="0.0" y="64" width="325" height="575"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WiG-B6-pzD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCq-EO-DfK">
-                                <rect key="frame" x="64" y="450" width="192" height="61"/>
-                                <state key="normal" image="MOC-10.png">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfO-D5-VwQ">
+                                <rect key="frame" x="48" y="465" width="224" height="46"/>
+                                <state key="normal" title="Button" image="MOC-10.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aBY-Hj-jFK" kind="modal" identifier="ToMap" id="Zm3-tg-eqK"/>
+                                    <segue destination="aBY-Hj-jFK" kind="push" id="Zgh-gm-ebj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moc07.png" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-lD-UsI">
-                                <rect key="frame" x="-2" y="0.0" width="325" height="575"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAa-YL-yTX">
+                                <rect key="frame" x="32" y="298" width="260" height="136"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-Hj-RjU">
+                                <rect key="frame" x="32" y="99" width="260" height="162"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8EM-hQ-3sP"/>
                     <connections>
-                        <outlet property="siv" destination="4S6-w8-I2b" id="fgc-j0-CVZ"/>
-                        <outlet property="tv" destination="WiG-B6-pzD" id="guR-ey-zaD"/>
+                        <outlet property="siv" destination="eRY-Hj-RjU" id="mm3-bf-sGO"/>
+                        <outlet property="tv" destination="vAa-YL-yTX" id="prF-Yt-Ifj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLO-p2-RDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="-746"/>
+            <point key="canvasLocation" x="-1121" y="-893"/>
         </scene>
         <!--Show Map View Controller-->
         <scene sceneID="1Tk-Wl-qwp">
@@ -140,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDB-9l-qZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-942"/>
+            <point key="canvasLocation" x="-654" y="-878"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="11b-tf-hA7">
@@ -171,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqE-KW-kBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-542" y="-1597"/>
+            <point key="canvasLocation" x="-1678" y="-1525"/>
         </scene>
         <!--Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -251,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-973" y="-1597"/>
+            <point key="canvasLocation" x="-2181" y="-1517"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -270,7 +271,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1465" y="-1178"/>
+            <point key="canvasLocation" x="-2601" y="-1106"/>
         </scene>
         <!--first-->
         <scene sceneID="EjR-CY-P9S">
@@ -291,7 +292,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2s-S2-umH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-973" y="-942"/>
+            <point key="canvasLocation" x="-2165" y="-870"/>
         </scene>
     </scenes>
     <resources>
