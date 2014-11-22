@@ -117,16 +117,22 @@
 }
 
 -(void)sv{
+    NSLog(@"uuuuuuuuuuuuuuuuu");
     //ACLの設定をする。
     //
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] =Comment.text;
     
     testObject[@"SegIndex"] = colorSegNum;
-    
-    NSNumber *LatitudeNumber = [NSNumber numberWithDouble:LatitudeDouble2];
+    double Latidouble = [ud doubleForKey:@"latitude"];
+    NSNumber *LatitudeNumber = [NSNumber numberWithDouble:Latidouble];
+    NSLog(@"77777777777777777777777777------->>>>>%f",Latidouble);
     testObject[@"LatitudeNum"] =LatitudeNumber;
-    NSNumber *LongitudeNumber = [NSNumber numberWithDouble:LongitudeDouble2];
+    //NSNumber *LongitudeNumber = [NSNumber numberWithDouble:LongitudeDouble2];
+    double Longdouble = [ud doubleForKey:@"longitude"];
+    NSNumber *LongitudeNumber = [NSNumber numberWithDouble:Longdouble];
+    NSLog(@"888888888888888888888%f",Longdouble);
     testObject[@"LongitudeNum"] = LongitudeNumber;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];

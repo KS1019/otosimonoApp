@@ -104,6 +104,14 @@
     
     [self performSegueWithIdentifier:@"Segue" sender:indexPath];
     
+    NSUserDefaults *defau = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *defaul2 = [NSMutableDictionary dictionary];
+    NSNumber *lalanumm = [LatitudeArray objectAtIndex:indexPath];
+    [defaul2 setObject:lalanumm forKey:@"lalalala"];
+    NSNumber *lolonumm = [LongitudeArray objectAtIndex:indexPath];
+    [defaul2 setObject:lolonumm forKey:@"lolololo"];
+    [defau synchronize];
+    
    // NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&& %@ &&&&&&&&&&&&&&&&&&&&&",comstr);
     /*-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
     if ([sg.identifier isEqualToString:@"Segue"])の後に呼ばれる*/

@@ -29,11 +29,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    double LatitudeDouble = [LatitudeNum2 doubleValue];
-    double LongitudeDouble = [LongitudeNum2 doubleValue];
-    NSLog(@"%f,%f",LatitudeDouble,LongitudeDouble);
-    CLLocationDegrees LatitudeDeg = LatitudeDouble;
-    CLLocationDegrees LongitudeDeg = LongitudeDouble;
+//    double LatitudeDouble = [LatitudeNum2 doubleValue];
+//    double LongitudeDouble = [LongitudeNum2 doubleValue];
+//    NSLog(@"%f,%f",LatitudeDouble,LongitudeDouble);
+    NSUserDefaults *defo = [NSUserDefaults standardUserDefaults];
+    double laladou = [defo doubleForKey:@"lalalala"];
+    CLLocationDegrees LatitudeDeg = laladou;
+    double lolodou = [defo doubleForKey:@"lolololo"];
+    CLLocationDegrees LongitudeDeg = lolodou;
     CLLocationCoordinate2D co;
     co.latitude = LatitudeDeg; // 経度
     co.longitude = LongitudeDeg; // 緯度
