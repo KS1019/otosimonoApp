@@ -58,6 +58,7 @@
     //query.limit = 10; // limit to at most 10 results
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (PFObject *testobject in objects) {
+            NSLog(@"hbhbf");
             // Do something with the returned PFObject in the gameScore variable.
             //NSLog(@"%@", testobject);
             NSLog(@"%@",str);
