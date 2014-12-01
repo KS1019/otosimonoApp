@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad
 {
+    
+    
     table.delegate=self;
     table.dataSource=self;
     [super viewDidLoad];
@@ -107,6 +109,7 @@
     
     NSUserDefaults *defau = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *defaul2 = [NSMutableDictionary dictionary];
+    //ここより下で落ちる
     NSNumber *lalanumm = [LatitudeArray objectAtIndex:indexPath];
     [defaul2 setObject:lalanumm forKey:@"lalalala"];
     NSNumber *lolonumm = [LongitudeArray objectAtIndex:indexPath];
