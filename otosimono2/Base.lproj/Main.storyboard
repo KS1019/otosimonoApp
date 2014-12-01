@@ -87,7 +87,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aBY-Hj-jFK" kind="push" id="Zgh-gm-ebj"/>
+                                    <segue destination="aBY-Hj-jFK" kind="modal" id="Zgh-gm-ebj"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAa-YL-yTX">
