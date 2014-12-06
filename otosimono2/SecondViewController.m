@@ -201,6 +201,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     if (imageurl) {
         // ライブラリ内の写真を選択
+        NSLog(@"9999999999999");
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
         ALAssetsLibraryAssetForURLResultBlock resultBlock = ^(ALAsset *asset) {
             ALAssetRepresentation *representation;
