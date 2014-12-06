@@ -35,6 +35,7 @@
     NSUserDefaults *defo = [NSUserDefaults standardUserDefaults];
     double laladou = [defo doubleForKey:@"lalalala"];
     CLLocationDegrees LatitudeDeg = laladou;
+    NSLog(@"laladou---->>>>%f",laladou);
     double lolodou = [defo doubleForKey:@"lolololo"];
     CLLocationDegrees LongitudeDeg = lolodou;
     CLLocationCoordinate2D co;

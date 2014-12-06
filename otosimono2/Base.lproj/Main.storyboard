@@ -240,7 +240,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SEND" image="TOUKOU2.png" id="Z7h-1E-pvt">
+                    <tabBarItem key="tabBarItem" title="送信" image="TOUKOU2.png" id="Z7h-1E-pvt">
                         <inset key="imageInsets" minX="85" minY="108" maxX="85" maxY="110"/>
                     </tabBarItem>
                     <connections>
@@ -273,11 +273,11 @@
             </objects>
             <point key="canvasLocation" x="-2601" y="-1106"/>
         </scene>
-        <!--first-->
+        <!--一覧-->
         <scene sceneID="EjR-CY-P9S">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c4u-1T-yao" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="first" image="first" id="BQ0-vj-B3U"/>
+                    <tabBarItem key="tabBarItem" title="一覧" image="first" id="BQ0-vj-B3U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tne-mH-izJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

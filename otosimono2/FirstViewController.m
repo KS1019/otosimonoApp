@@ -109,11 +109,11 @@
     
     NSUserDefaults *defau = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary *defaul2 = [NSMutableDictionary dictionary];
-    //ここより下で落ちる。
     NSNumber *lalanumm = [LatitudeArray objectAtIndex:indexPath.row];
     [defaul2 setObject:lalanumm forKey:@"lalalala"];
     NSNumber *lolonumm = [LongitudeArray objectAtIndex:indexPath.row];
     [defaul2 setObject:lolonumm forKey:@"lolololo"];
+    [defau registerDefaults:defaul2];
     [defau synchronize];
     
    // NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&& %@ &&&&&&&&&&&&&&&&&&&&&",comstr);
