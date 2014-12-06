@@ -47,7 +47,7 @@
     i=1;
       //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
-    UIImage *Showimage = [UIImage imageNamed:@"MOC-03.png"];
+    Showimage = [UIImage imageNamed:@"MOC-03.png"];
     [PhotoSelect setBackgroundImage:Showimage forState:UIControlStateNormal];
 }
 
@@ -136,10 +136,10 @@
     testObject[@"LongitudeNum"] = LongitudeNumber;
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
-    NSData *imageData = UIImagePNGRepresentation(Sendimage);
-    
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-    [imageFile save];
+    //NSData *imageData = UIImagePNGRepresentation(Sendimage);
+    NSData *imageData = UIImageJPEGRepresentation(Sendimage,0.8f);
+    PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
+    //[imageFile save];
     NSLog(@"Hi");
     //testObject[@"imageFile"] = imageFile;
     [testObject setObject:imageFile forKey:@"image"];
@@ -147,8 +147,10 @@
     //[testObject save];
     
     //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
+    [PhotoSelect setBackgroundImage:Showimage forState:UIControlStateNormal];
+
     
-    Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
+    //Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
     Comment.text=@"";
     
     

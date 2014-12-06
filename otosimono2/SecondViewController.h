@@ -24,6 +24,7 @@
 
     
     UIImage *Sendimage;
+    UIImage *Showimage;
     
     
     NSString *comstr;
