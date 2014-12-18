@@ -765,8 +765,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tomoko Suto (NB3U363MVQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tomoko Suto (NB3U363MVQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -781,7 +781,7 @@
 				GCC_PREFIX_HEADER = "otosimono2/LostChecker-Prefix.pch";
 				INFOPLIST_FILE = "otosimono2/LostChecker-Info.plist";
 				PRODUCT_NAME = LostChecker;
-				PROVISIONING_PROFILE = "d8a9f804-5288-4a48-87a9-2d4d9f023e76";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -791,8 +791,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tomoko Suto (NB3U363MVQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tomoko Suto (NB3U363MVQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -807,7 +807,7 @@
 				GCC_PREFIX_HEADER = "otosimono2/LostChecker-Prefix.pch";
 				INFOPLIST_FILE = "otosimono2/LostChecker-Info.plist";
 				PRODUCT_NAME = LostChecker;
-				PROVISIONING_PROFILE = "d8a9f804-5288-4a48-87a9-2d4d9f023e76";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
