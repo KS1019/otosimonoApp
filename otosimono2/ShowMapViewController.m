@@ -43,9 +43,12 @@
     co.longitude = LongitudeDeg; // 緯度
     
     // 生成
+    CGRect bounds = self.view.bounds;
+    
+    
     mv = [[MKMapView alloc] init];
     mv.delegate = self;
-    mv.frame = CGRectMake(0, 0, 320, 524);
+    mv.frame = CGRectMake(0, 0, 320, bounds.size.height-45);
     mv.mapType = MKMapTypeHybrid;
     //    mv.frame = 	[[UIScreen mainScreen]applicationFrame];;
     float labelh = self.view.frame.size.height;
