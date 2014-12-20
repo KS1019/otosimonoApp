@@ -26,8 +26,6 @@
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *bid = [bundle bundleIdentifier];
     NSLog(@"---------->>>>>%@",bid);
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,17 +33,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    
-//    if (segue==1) {
-//   segue=0;
-//    }else{
-//        [self refresh]; 
-//    }
-//    //NSLog(@"44444444444444444");
-//}
 
 -(IBAction)refresh{
     NSLog(@"111111!!!!1");

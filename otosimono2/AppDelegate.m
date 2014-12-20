@@ -14,6 +14,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIStoryboard *storyboard;
+    NSString *storyBoardName;
+    CGRect rect = [UIScreen mainScreen].bounds;
+    
+    if (rect.size.height == 568) {
+    storyBoardName = @"Main";
+        NSLog(@"4.0or4.7or5.5");
+    }else{
+        storyBoardName = @"2ndStoryboard";
+        NSLog(@"3.5");
+    }
+    
+    storyboard = [UIStoryboard storyboardWithName:storyBoardName bundle:nil];
+    UIViewController *mainViewController = [storyboard instantiateInitialViewController];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.rootViewController = mainViewController;
+    [self.window makeKeyAndVisible];
+    
+    
     [Parse setApplicationId:@"YarC9i8xVkvP04QSssaTr7w19A7JOjPthOajEtVu"
                   clientKey:@"KyZawwdg7g21RVkaix0gkpX1U49C3ieYMDZROitv"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

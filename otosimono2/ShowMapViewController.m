@@ -78,16 +78,16 @@
           viewForAnnotation:(id)annotation{
     
     static NSString *PinIdentifier = @"Pin";
-    MKPinAnnotationView *pin =
+    MKPinAnnotationView *pinnn =
     (MKPinAnnotationView*)
     [mv dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
-    if(pin == nil){
-        pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
-        pin.animatesDrop = YES;  // アニメーションをする
-        pin.pinColor=MKPinAnnotationColorPurple;  // ピンの色を紫にする
-        pin.canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
+    if(pinnn == nil){
+        pinnn = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+        pinnn.animatesDrop = YES;  // アニメーションをする
+        pinnn.pinColor=MKPinAnnotationColorPurple;  // ピンの色を紫にする
+        pinnn.canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
     }
-    return pin;
+    return pinnn;
     
 }
 

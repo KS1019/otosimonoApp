@@ -22,6 +22,7 @@
 		7C116BC919186FF500ADF2F3 /* TOUKOU.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C116BC819186FF500ADF2F3 /* TOUKOU.png */; };
 		7C116BCB1918711100ADF2F3 /* TOUKOU2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C116BCA1918711100ADF2F3 /* TOUKOU2.png */; };
 		7C22CDB21A455401009B84DC /* TOUKOU2 new new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C22CDB11A455401009B84DC /* TOUKOU2 new new.png */; };
+		7C22CDB61A456847009B84DC /* 2ndStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */; };
 		7C35E85A1915CA5600CC0573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8591915CA5600CC0573 /* Foundation.framework */; };
 		7C35E85C1915CA5600CC0573 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E85B1915CA5600CC0573 /* CoreGraphics.framework */; };
 		7C35E85E1915CA5600CC0573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E85D1915CA5600CC0573 /* UIKit.framework */; };
@@ -93,6 +94,7 @@
 		7C116BC819186FF500ADF2F3 /* TOUKOU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU.png; sourceTree = "<group>"; };
 		7C116BCA1918711100ADF2F3 /* TOUKOU2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU2.png; sourceTree = "<group>"; };
 		7C22CDB11A455401009B84DC /* TOUKOU2 new new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TOUKOU2 new new.png"; sourceTree = "<group>"; };
+		7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 2ndStoryboard.storyboard; sourceTree = "<group>"; };
 		7C35E8561915CA5600CC0573 /* LostChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35E8591915CA5600CC0573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C35E85B1915CA5600CC0573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 				7C35E8681915CA5600CC0573 /* AppDelegate.h */,
 				7C35E8691915CA5600CC0573 /* AppDelegate.m */,
 				7C35E86B1915CA5600CC0573 /* Main.storyboard */,
+				7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */,
 				7CB70E4219B2642E00561C0A /* ShowMapViewController.h */,
 				7CB70E4319B2642E00561C0A /* ShowMapViewController.m */,
 				7CACD4231954527B009A1510 /* showmoreViewController.h */,
@@ -589,6 +592,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C22CDB61A456847009B84DC /* 2ndStoryboard.storyboard in Resources */,
 				7C941C471A1750490080BF13 /* Moc07.png in Resources */,
 				7C941C451A1750490080BF13 /* Moc05.png in Resources */,
 				7C941C421A1750490080BF13 /* Moc02.png in Resources */,

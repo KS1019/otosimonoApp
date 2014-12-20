@@ -288,9 +288,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="送信" image="TOUKOU2 new new.png" id="Z7h-1E-pvt">
-                        <inset key="imageInsets" minX="85" minY="108" maxX="85" maxY="110"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="送信" image="TOUKOU2 new new.png" id="Z7h-1E-pvt"/>
                     <connections>
                         <outlet property="Comment" destination="JjI-iU-FN7" id="a58-c9-9ag"/>
                         <outlet property="PhotoSelect" destination="9Qe-Zp-pV0" id="QWt-8A-Pbf"/>
