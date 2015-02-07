@@ -66,6 +66,7 @@
                         <outlet property="label" destination="6MK-7N-nMR" id="tD4-Hz-piF"/>
                         <outlet property="table" destination="ANy-gS-Vn3" id="w3G-Hp-YWf"/>
                         <segue destination="Ywd-em-BBk" kind="push" identifier="Segue" id="o8p-Se-bPi"/>
+                        <segue destination="g1W-9A-BDq" kind="modal" id="WaW-JW-NYX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -103,8 +104,18 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-Hj-RjU">
-                                <rect key="frame" x="32" y="99" width="260" height="162"/>
+                                <rect key="frame" x="32" y="119" width="260" height="162"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5r-fl-qPo">
+                                <rect key="frame" x="16" y="72" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="通報">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HOUKOKU" destination="Ywd-em-BBk" eventType="touchUpInside" id="Efe-DG-NcW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -116,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLO-p2-RDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1661" y="-859"/>
+            <point key="canvasLocation" x="-1686" y="-851"/>
         </scene>
         <!--Show Map View Controller-->
         <scene sceneID="1Tk-Wl-qwp">
@@ -148,6 +159,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDB-9l-qZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1322" y="-859"/>
+        </scene>
+        <!--RuleViewController-->
+        <scene sceneID="Yuu-a9-DYK">
+            <objects>
+                <viewController storyboardIdentifier="RuleViewController" title="RuleViewController" id="g1W-9A-BDq" customClass="RuleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wDX-p1-Snc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8x8-vw-els"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8mQ-Ls-pNN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-VD-6XL">
+                                <rect key="frame" x="34" y="39" width="252" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">本サービス利用規約 (以下 "規約") は、ユーザーがこのサービスとLostChecker (以下 "サービス) にアクセスし利用する際と、本サービスにアップロードされダウンロードされ表示される情報、テキスト、イラスト、写真、その他のデータ (以下 "コンテンツ") に適用されます。本サービスにアクセスし利用することは、ユーザーが本規約に同意し遵守することが条件です。本サービスへアクセスし利用することは、本規約に従うことを同意したことになります。
+
+あなたは、本サービスを利用すること、ポストしたコンテンツ、およびそれによって引き起こされる結果に責任があります。本規約に基づいて他の人たちと気持ちよく共有できるようなコンテンツだけを提供するべきです。
+
+ユーザーは、拘束力ある契約をLostCheckerと結ぶことができ、かつ、日本国又は他の関係する国と地域の法律によりサービスを受けることが禁じられている人でない場合に限り、本サービスを利用することができます。ユーザーは、この規約及び関係する地方自治体、州、国の法律・規則並びに国際法律・規則のすべてに従わなければ本サービスを利用できません。
+
+LostCheckerが提供する本サービスは常に進化し続けており、LostCheckerが提供する本サービスの形態と性質はユーザーに対して事前に通知することなく随時変更されます。また、LostCheckerは、ユーザー又は利用者全般に対して本サービス（又は本サービスに組み込まれているいずれかの要素）を提供することを（永久的に又は一時的に）やめることができ、ユーザーに対してこれを事前に通知することができない場合があります。さらに、運営者は、ユーザーに対して事前に通知せずに何時でも運営者単独の裁量で利用と保存に制限を設ける権利を保有します。
+
+本サービスは広告を含むことができ、広告については、本サービス上のコンテンツ又は情報、本サービスを通じて為される問い合せ、その他の情報をそのターゲットとすることができるものとします。本サービス上でのLostCheckerによる広告の種類と規模は随時変更されます。本サービスへのアクセスと本サービスの利用をLostCheckerがユーザーに対して許諾することと引き換えに、ユーザーは、本サービス上あるいは、ユーザーや他者から提供されたコンテンツもしくは情報に関連して、LostCheckerとその第三者プロバイダー及びパートナーが広告を掲載できることを承諾します。
+
+ユーザーは、本サービスを利用することにより、LostCheckerによる保存、加工、使用のためにLostCheckerがその情報を収集し使用することを承諾するものとします。　　　　　　　　　運営者は、ユーザーへの本サービス提供の一環として、必要に応じて、新サービスや管理メッセージなどの案内をユーザーに提供します。これらの案内は本サービスとユーザーのLostCheckerアカウントの一部であると見なされ、ユーザーは、これらの案内の受け取りを拒否できないことがあります。
+
+一切のコンテンツについては、公的に送信されたものであるか私的に送信されたものであるかを問わず、その全責任はコンテンツの作成者にあります。運営者は、本サービスを介して送られたコンテンツを監視あるいは管理することはできません。また、運営者は、かかるコンテンツに関して責任を負うことはできません。ユーザーは、本サービスを介して送られ又は本サービスを通じてユーザーが獲得したコンテンツあるいは素材を使用するとき、又はかかるコンテンツあるいは素材に依存するときは、それに伴うリスクはユーザー本人が単独で負うものとします
+
+運営者は、本サービスを介して投稿された一切のコンテンツ又は通信内容が完全であり、真実であり、正確であり、又は信頼できるものであることを是認せず、支持せず、表示せず、保証しません。また、本サービスを介して表明された一切の意見を是認しません。ユーザーは、本サービスを利用することにより、不快な、有害な、不正確な又は不適切なコンテンツに、場合によっては不実の又は詐欺的な表示にさらされる可能性があることを承知します。一切のコンテンツ内の誤り又は欠落、あるいは本サービスを介して投稿され、電子メールで送信され、伝送され、獲得され又は他所で放送された一切のコンテンツの使用の結果発生したあらゆる類の一切の損失又は損害を含め、コンテンツについては、LostCheckerは如何なる情況の下でも一切その責を負いません。
+
+ユーザーは、ユーザーが本サービス上に又は本サービスを通じて提出し、送りあるいは表示する一切のコンテンツに対する権利を保有しています。ユーザーは、本サービス上に又は本サービスを通じてコンテンツを提出し、送り、又は表示することにより、一切の媒体又は配付方法（現在知られているものであると今後開発されるものであるとを問わず）においてかかるコンテンツを使用し、コピーし、複製し、加工し、改作し、変更し、発表し、送信し、表示し、配付するための世界的な通常実施権を（再実施権を付けて）運営者に対して無償で許諾します。
+
+この規定が現在の最新版であり、旧規定と本規定が競合した場合には本規定が優先されます。
+
+利用規約はその必要がある場合には改定します。
+規約の改定が発効した後で、当社のサービスへのアクセスしたり、サービスの利用を継続した場合には、改定後の利用規約に従うことに同意したとみなされます。
+
+発効日：2015年1月10日</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNJ-Ch-ywA">
+                                <rect key="frame" x="128" y="505" width="65" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="同意する">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Agree" destination="g1W-9A-BDq" eventType="touchUpInside" id="UGQ-cq-cBz"/>
+                                    <segue destination="8YX-ce-x5E" kind="modal" id="aJy-vz-2ay"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moc07.png" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-87-ul2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esf-pd-HLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2744" y="-496"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="11b-tf-hA7">

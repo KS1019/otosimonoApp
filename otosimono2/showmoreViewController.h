@@ -18,6 +18,8 @@
     
     NSString *CommentString;
     
+    NSString *ObjectId;
+    
     NSNumber *LatitudetoSMVC;
     NSNumber *LongitudetoSMVC;
     
@@ -26,5 +28,6 @@
 @property(nonatomic)UIImage *showimage;
 @property(nonatomic)NSNumber *LatitudetoSMVC;
 @property(nonatomic)NSNumber *LongitudetoSMVC;
+@property(nonatomic)NSString *ObjectId;
 
 @end

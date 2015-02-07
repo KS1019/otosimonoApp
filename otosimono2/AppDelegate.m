@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "FirstViewController.h"
 
 
 @implementation AppDelegate
@@ -34,6 +35,17 @@
     [self.window makeKeyAndVisible];
     
     
+    if ([self isFirstRun]) {
+        // 初回起動時の処理を書く
+        UIViewController *RuleViewController =  [storyboard instantiateViewControllerWithIdentifier:@"RuleViewController"];
+        //UIViewController *RuleViewController =  [self.storyboard instantiateViewControllerWithIdentifier:@"RuleViewController"];
+        
+      //  [self presentViewController:RuleViewController animated:YES completion:nil];//YESならModal,Noなら何もなし
+        self.window.rootViewController = RuleViewController;
+        [self.window makeKeyAndVisible];
+        NSLog(@"初回起動だよ");
+    }
+    
     [Parse setApplicationId:@"YarC9i8xVkvP04QSssaTr7w19A7JOjPthOajEtVu"
                   clientKey:@"KyZawwdg7g21RVkaix0gkpX1U49C3ieYMDZROitv"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
@@ -50,6 +62,26 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+- (BOOL)isFirstRun
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([userDefaults objectForKey:@"firstRunDate"]) {
+        // 日時が設定済みなら初回起動でない
+        return NO;
+    }
+    
+    // 初回起動日時を設定
+    //[userDefaults setObject:[NSDate date] forKey:@"firstRunDate"];
+    
+    // 保存
+    //[userDefaults synchronize];
+    
+    // 初回起動
+    return YES;
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

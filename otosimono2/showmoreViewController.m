@@ -8,6 +8,8 @@
 
 #import "showmoreViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <Parse/Parse.h>
+
 
 @interface showmoreViewController ()
 
@@ -19,6 +21,7 @@
 @synthesize CommentString;
 @synthesize LatitudetoSMVC;
 @synthesize LongitudetoSMVC;
+@synthesize ObjectId;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"ObjectId---->>>%@",ObjectId);
     
     [siv setImage:self.showimage];
     tv.text=CommentString;
@@ -54,6 +58,34 @@
          SMVC.LongitudeNum2 = LongitudetoSMVC;
      }
 }
+
+-(IBAction)HOUKOKU{
+    UIAlertView *alert =
+    [[UIAlertView alloc]
+     initWithTitle:@"通報しますか？"
+     message:@""
+     delegate:self
+     cancelButtonTitle:@"キャンセル"
+     otherButtonTitles:@"OK", nil
+     ];
+    [alert show];
+    
+
+}
+-(void)alertView:(UIAlertView*)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    PFObject *Houkoku = [PFObject objectWithClassName:@"HOUKOKU"];
+
+    switch (buttonIndex) {
+        case 1:
+            Houkoku[@"POST_ID"] = ObjectId;
+            [Houkoku saveInBackground];
+                break;
+     
+    }
+    
+}
+
 
 /*
 #pragma mark - Navigation

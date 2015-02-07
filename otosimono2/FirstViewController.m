@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad
 {
-    
-    
     table.delegate=self;
     table.dataSource=self;
     [super viewDidLoad];
@@ -27,6 +25,7 @@
     NSString *bid = [bundle bundleIdentifier];
     NSLog(@"---------->>>>>%@",bid);
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,12 +41,12 @@
     CellColorArray = [[NSMutableArray alloc]init];
     LatitudeArray = [[NSMutableArray alloc]init];
     LongitudeArray = [[NSMutableArray alloc]init];
+    IdArray = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"TestObject"];
     //query.skip = 0;
     //query.limit = 10; // limit to at most 10 results
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (PFObject *testobject in objects) {
-            NSLog(@"hbhbf");
             // Do something with the returned PFObject in the gameScore variable.
             //NSLog(@"%@", testobject);
             NSLog(@"%@",str);
@@ -65,6 +64,11 @@
             
             testimage = [testobject objectForKey:@"image"];
             [imagearray addObject:testimage];
+          
+            
+            NSString *IdString = testobject.objectId;
+            [IdArray addObject:IdString];
+            NSLog(@"id---->>>%@",IdString);
             
             NSNumber *LatitudeNum = [testobject objectForKey:@"LatitudeNum"];
             NSNumber *LongitudeNum  = [testobject objectForKey:@"LongitudeNum"];
@@ -103,8 +107,7 @@
     [defau registerDefaults:defaul2];
     [defau synchronize];
     
-   // NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&& %@ &&&&&&&&&&&&&&&&&&&&&",comstr);
-    /*-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
+      /*-(void)prepareForSegue:(UIStoryboardSegue *)sg sender:(id)sender{
     if ([sg.identifier isEqualToString:@"Segue"])の後に呼ばれる*/
 }
 
@@ -121,6 +124,7 @@
        // comstr = [textarray objectAtIndex:indexPath.row];
         resultVC.showimage  = image;
         resultVC.CommentString = [textarray objectAtIndex:indexPath.row];
+        resultVC.ObjectId = [IdArray objectAtIndex:indexPath.row];
         NSLog(@"resultVC.showimage is %@", resultVC.showimage);
         NSLog(@"resultVC.CommentString is %@",resultVC.CommentString);
         if ([sg.identifier isEqualToString:@"Segue"]) {
@@ -133,7 +137,6 @@
         }
     }
 }
-
 
 
 

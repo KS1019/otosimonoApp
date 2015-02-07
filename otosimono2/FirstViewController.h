@@ -32,6 +32,7 @@
     NSMutableArray *CellColorArray;
     NSMutableArray *LatitudeArray;
     NSMutableArray *LongitudeArray;
+    NSMutableArray *IdArray;
     
     UIImage *passImage;
     

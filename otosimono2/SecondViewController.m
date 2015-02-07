@@ -78,23 +78,7 @@
         //NSLog(@"objectId->%@",testooooo);
         }
     }];
-    /*
-    [query getObjectInBackgroundWithId:@"UsGDufbBdR" block:^(PFObject *testobject, NSError *error) {
-        
-        // Do something with the returned PFObject in the gameScore variable.
-        NSLog(@"%@", testobject);
-        teststr =[testobject objectForKey:@"foo"];
-        NSLog(@"%@",teststr);
-        
-        NSData *testimage=[[testobject objectForKey:@"image"]getData];
-        UIImage *testimage2=[[UIImage alloc]initWithData:testimage];
-        [testimageview setImage:testimage2];
-        
-        NSString *testooooo=[testobject objectForKey:@"objectId"];
-        NSLog(@"objectId->%@",testooooo);
-    }];
-   */ 
-}
+   }
 -(IBAction)Photo{
     UIActionSheet *as = [[UIActionSheet alloc] init];
     as.delegate = self;
@@ -148,18 +132,9 @@
     
     //[LostPhoto setImage:[UIImage imageNamed:@"NOIMAGE.png"]];
     [PhotoSelect setBackgroundImage:Showimage forState:UIControlStateNormal];
-
-    
-    //Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
+    Sendimage=[UIImage imageNamed:@"NOIMAGE.png"];
     Comment.text=@"";
     
-    
-    
-    /* PFObject *jobApplication = [PFObject objectWithClassName:@"JobApplication"];
-     jobApplication[@"applicantName"] = @"Joe Smith";
-     jobApplication[@"applicantResumeFile"] = imageFile;
-     [jobApplication saveInBackground];
-     */
     [SVProgressHUD dismiss];
 }
 -(void)actionSheet:(UIActionSheet*)actionSheet
