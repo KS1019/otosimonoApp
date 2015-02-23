@@ -14,10 +14,6 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The spirit of stack overflow is coders helping coders</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>I have learned more on stack overflow than anything else</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -34,13 +30,17 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>FacebookAppID</key>
 	<string>675554062500348</string>
 	<key>FacebookDisplayName</key>
 	<string>otosimono</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>I have learned more on stack overflow than anything else</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The spirit of stack overflow is coders helping coders</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
