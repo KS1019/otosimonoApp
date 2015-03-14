@@ -121,7 +121,7 @@
     //[testObject saveInBackground];
     //UIImage *image= [UIImage imageNamed:@"Sendimage"];
     //NSData *imageData = UIImagePNGRepresentation(Sendimage);
-    NSData *imageData = UIImageJPEGRepresentation(Sendimage,0.8f);
+    NSData *imageData = UIImageJPEGRepresentation(Sendimage,0.01f);
     PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
     //[imageFile save];
     NSLog(@"Hi");
