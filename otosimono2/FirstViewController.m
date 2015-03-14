@@ -83,9 +83,20 @@
             
             NSLog(@"========== imageArray is %@", imagearray);
             NSLog(@"%@",textarray[0]);
+            
+            textarray = [[textarray reverseObjectEnumerator]allObjects];
+            imagearray = [[imagearray reverseObjectEnumerator]allObjects];
+            CellColorArray = [[CellColorArray reverseObjectEnumerator]allObjects];
+            LatitudeArray = [[LatitudeArray reverseObjectEnumerator]allObjects];
+            LongitudeArray = [[LongitudeArray reverseObjectEnumerator]allObjects];
+            IdArray = [[IdArray reverseObjectEnumerator]allObjects];
+            
             [table reloadData];
         }
     }];
+    
+    
+    
     
 }
 
