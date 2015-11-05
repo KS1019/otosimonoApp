@@ -9,12 +9,17 @@
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "FirstViewController.h"
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
+
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Fabric with:@[[Twitter class]]];
+    
     UIStoryboard *storyboard;
     NSString *storyBoardName;
     CGRect rect = [UIScreen mainScreen].bounds;
@@ -60,6 +65,8 @@
     // Facebook 2
     [FBLoginView class];
     // Override point for customization after application launch.
+    
+    
     return YES;
 }
 

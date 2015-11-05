@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="YIp-3p-xBB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="YIp-3p-xBB">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -22,7 +22,7 @@
                                         <rect key="frame" x="0.0" y="86" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pIP-5L-GdJ" id="AMm-4A-uvN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JI1-vF-lbs">
@@ -132,7 +132,7 @@ LostCheckerが提供する本サービスは常に進化し続けており、Los
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcE-oq-9pH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1595" y="-198"/>
+            <point key="canvasLocation" x="-2665" y="-661"/>
         </scene>
         <!--Showmore View Controller-->
         <scene sceneID="7u9-ub-FhU">
@@ -142,10 +142,6 @@ LostCheckerが提供する本サービスは常に進化し続けており、Los
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moc07.png" id="Wdj-qv-IjG">
-                                <rect key="frame" x="0.0" y="64" width="325" height="575"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ahK-ob-Osr">
                                 <rect key="frame" x="43" y="260" width="239" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -280,7 +276,7 @@ LostCheckerが提供する本サービスは常に進化し続けており、Los
                                 <rect key="frame" x="42" y="172" width="236" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">こちらは、このアプリのヘルプになります。　　　　　　　　　　　　　　　　　　一覧に表示されている色は、　　　　青色　ー＞　家　　　　　　　　　　　　黄緑色ー＞　警察署、交番　　　　　　　　　黄色　ー＞　店舗等　　　　　　　　　　　　赤色　ー＞　？　　　　　　　　　　に、あることを表しています。</string>
+                                <string key="text">こちらは、このアプリのヘルプになります。　　　　　　　　　　　　　　　　　　一覧に表示されている色は、　　　　青色　ー＞　家　　　　　　　　　　　　緑色　ー＞　警察署、交番　　　　　　　　　黄色　ー＞　店舗等　　　　　　　　　　　　赤色　ー＞　？　　　　　　　　　　に、あることを表しています。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -416,6 +412,21 @@ LostCheckerが提供する本サービスは常に進化し続けており、Los
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kqe-lN-Cpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1571" y="-802"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Ses-yh-XPy">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="ttz-r7-o9i" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zia-UP-DUs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVt-jS-LHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2215" y="-412"/>
         </scene>
     </scenes>
     <resources>

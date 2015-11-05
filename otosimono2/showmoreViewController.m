@@ -22,6 +22,7 @@
 @synthesize LatitudetoSMVC;
 @synthesize LongitudetoSMVC;
 @synthesize ObjectId;
+@synthesize BackGroundColor;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,8 +41,10 @@
     [siv setImage:self.showimage];
     tv.text=CommentString;
     tv.editable = NO;
+    self.view.backgroundColor = BackGroundColor;
     NSLog(@"~~~~~~~~~~~~~~~~~~~ %@",CommentString);
     NSLog(@"showimage is %@", self.showimage);
+    NSLog(@"UIColor : %@",BackGroundColor);
     //siv=showimage;
 }
 

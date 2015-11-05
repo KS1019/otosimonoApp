@@ -7,6 +7,10 @@
 //
 
 #import "FirstViewController.h"
+#import <TwitterKit/TwitterKit.h>
+#import "LoginViewController.h"
+#import "CustomCell1.h"
+
 
 @interface FirstViewController ()
 
@@ -24,6 +28,20 @@
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *bid = [bundle bundleIdentifier];
     NSLog(@"---------->>>>>%@",bid);
+    
+    
+    // カスタムセルを使用
+    UINib *nib = [UINib nibWithNibName:@"CustomCell1" bundle:nil];
+    [table registerNib:nib forCellReuseIdentifier:@"Cell"];
+
+    
+    //ログインしていなかったら
+    /*
+     if ([self isLogin]) {
+        LoginViewController * loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:loginViewController animated:YES completion:nil];
+    }
+     */
 }
 
 
@@ -128,17 +146,46 @@
     if ([sg.identifier isEqualToString:@"Segue"]) {
         /*-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPathより先に呼ばれる。*/
         
+        
+        
         showmoreViewController *resultVC = sg.destinationViewController;
         //UIImage *image = [UIImage imageWithData:[sender getData]];
         NSIndexPath* indexPath = (NSIndexPath*)sender;
         NSLog(@"length of ImageArray %d",[imagearray count]);
+        
         UIImage *image = [UIImage imageWithData:[[imagearray objectAtIndex: indexPath.row] getData]];
+        int cellColor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
+        NSLog(@"cellColor : %d when prepare For Segue",cellColor);
+        backGroundColor = [UIColor new];
+        switch (cellcolor) {
+            case 0:
+                //ブルー
+                 resultVC.BackGroundColor = [UIColor colorWithRed:0.74 green:0.96 blue:0.96 alpha:1.0];
+                break;
+            case 1:
+                //グリーン
+                resultVC.BackGroundColor = [UIColor colorWithRed:0.71 green:0.92 blue:0.79 alpha:1.0];
+                break;
+            case 2:
+                //イエロー
+                resultVC.BackGroundColor = [UIColor colorWithRed:0.85 green:0.95 blue:0.71 alpha:1.0];
+                break;
+            case 3:
+                //レッド
+                resultVC.BackGroundColor = [UIColor colorWithRed:1.00 green:0.72 blue:0.76 alpha:1.0];
+                break;
+        }
+        
+        
+
        // comstr = [textarray objectAtIndex:indexPath.row];
         resultVC.showimage  = image;
         resultVC.CommentString = [textarray objectAtIndex:indexPath.row];
         resultVC.ObjectId = [IdArray objectAtIndex:indexPath.row];
+        //resultVC.BackGroundColor = backGroundColor;
         NSLog(@"resultVC.showimage is %@", resultVC.showimage);
         NSLog(@"resultVC.CommentString is %@",resultVC.CommentString);
+        NSLog(@"\nBackGroundColor : %@\ncellColor : %d",resultVC.BackGroundColor,cellColor);
         if ([sg.identifier isEqualToString:@"Segue"]) {
             /*-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPathより先に呼ばれる。*/
             showmoreViewController *SMVC = sg.destinationViewController;
@@ -172,21 +219,27 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellIdentifier=@"Cell";
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    //UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    CustomCell1 * cell = [table dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    [[cell.commentLabel layer] setCornerRadius:5.0];
+    [cell.commentLabel setClipsToBounds:YES];
     
         if (!cell) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-        cell.textLabel.text=[textarray objectAtIndex:indexPath.row];
+    //cell.textLabel.text=[textarray objectAtIndex:indexPath.row];
     
-    cell.imageView.backgroundColor = [UIColor grayColor];
-    PFFile *pfImage = [imagearray objectAtIndex:indexPath.row];
-    [pfImage getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            cell.imageView.image = [UIImage imageWithData:imageData];
-            [table reloadData];
-        }
-    }];
+    cell.commentLabel.text = [textarray objectAtIndex:indexPath.row];
+    //cell.imageView.backgroundColor = [UIColor grayColor];
+//    PFFile *pfImage = [imagearray objectAtIndex:indexPath.row];
+//    [pfImage getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+//        if (!error) {
+//            cell.imageView.image = [UIImage imageWithData:imageData];
+//            [table reloadData];
+//        }
+//    }];
     
 
 
@@ -194,22 +247,57 @@
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"CellColor Method");
     cellcolor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
     switch (cellcolor) {
         case 0:
-            cell.contentView.backgroundColor = [UIColor blueColor];
+            //ブルー
+            cell.contentView.backgroundColor = [UIColor colorWithRed:0.74 green:0.96 blue:0.96 alpha:1.0];
             break;
         case 1:
-            cell.contentView.backgroundColor = [UIColor greenColor];
+            //グリーン
+            cell.contentView.backgroundColor = [UIColor colorWithRed:0.71 green:0.92 blue:0.79 alpha:1.0];
             break;
         case 2:
-            cell.contentView.backgroundColor = [UIColor yellowColor];
+            //イエロー
+            cell.contentView.backgroundColor = [UIColor colorWithRed:0.85 green:0.95 blue:0.71 alpha:1.0];
             break;
         case 3:
-            cell.contentView.backgroundColor = [UIColor redColor];
+            //レッド
+            cell.contentView.backgroundColor = [UIColor colorWithRed:1.00 green:0.72 blue:0.76 alpha:1.0];
             break;
     }
+    NSLog(@"\ncellcolor : %d \n backgroundColor : %@",cellcolor,cell.contentView.backgroundColor);
   }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [CustomCell1 rowHeight];
+}
+
+#pragma mark- isLogin
+
+-(BOOL)isLogin
+{
+    boolString = [NSString new];
+    [[Twitter sharedInstance] logInWithCompletion:^(TWTRSession *session, NSError *error) {
+        if (session) {
+            NSLog(@"signed in as %@", [session userName]);
+            boolString = @"NO";
+           
+        } else {
+            NSLog(@"error: %@", [error localizedDescription]);
+            boolString = @"YES";
+           
+        }
+    }];
+    
+    if ([boolString  isEqual: @"NO"]) {
+        return NO;
+    }
+    
+    return YES;
+}
 
 @end

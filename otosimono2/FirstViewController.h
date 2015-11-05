@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "showmoreViewController.h"
 #import "showmoreViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface FirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     IBOutlet UITableView *table;
@@ -21,9 +22,10 @@
     
     UIImage *img;
 
-    NSString *testr;
-    NSString *str;
-    NSString *comstr;
+    NSString * testr;
+    NSString * str;
+    NSString * comstr;
+    NSString * boolString;
     
     NSNumber *CellColorNum;
     
@@ -35,6 +37,8 @@
     NSMutableArray *IdArray;
     
     UIImage *passImage;
+    
+    UIColor * backGroundColor;
     
     PFFile *testimage;
     

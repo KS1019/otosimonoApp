@@ -21,6 +21,12 @@
 		7C116BC519186C2C00ADF2F3 /* SENDBTN.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C116BC419186C2C00ADF2F3 /* SENDBTN.png */; };
 		7C116BC919186FF500ADF2F3 /* TOUKOU.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C116BC819186FF500ADF2F3 /* TOUKOU.png */; };
 		7C116BCB1918711100ADF2F3 /* TOUKOU2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C116BCA1918711100ADF2F3 /* TOUKOU2.png */; };
+		7C1FAAF31BDA61EC004831B8 /* CustomCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FAAF21BDA61EC004831B8 /* CustomCell1.xib */; };
+		7C1FAAF71BDA686C004831B8 /* CustomCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FAAF61BDA686C004831B8 /* CustomCell1.m */; };
+		7C1FAAFD1BE381DB004831B8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FAAF91BE381DB004831B8 /* Fabric.framework */; };
+		7C1FAAFE1BE381DB004831B8 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FAAFA1BE381DB004831B8 /* TwitterKit.framework */; };
+		7C1FAAFF1BE381DB004831B8 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FAAFB1BE381DB004831B8 /* TwitterKitResources.bundle */; };
+		7C1FAB001BE381DB004831B8 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FAAFC1BE381DB004831B8 /* TwitterCore.framework */; };
 		7C22CDB21A455401009B84DC /* TOUKOU2 new new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C22CDB11A455401009B84DC /* TOUKOU2 new new.png */; };
 		7C22CDB61A456847009B84DC /* 2ndStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */; };
 		7C35E85A1915CA5600CC0573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C35E8591915CA5600CC0573 /* Foundation.framework */; };
@@ -29,7 +35,6 @@
 		7C35E8641915CA5600CC0573 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C35E8621915CA5600CC0573 /* InfoPlist.strings */; };
 		7C35E8661915CA5600CC0573 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35E8651915CA5600CC0573 /* main.m */; };
 		7C35E86A1915CA5600CC0573 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35E8691915CA5600CC0573 /* AppDelegate.m */; };
-		7C35E86D1915CA5600CC0573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C35E86B1915CA5600CC0573 /* Main.storyboard */; };
 		7C35E8701915CA5600CC0573 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35E86F1915CA5600CC0573 /* FirstViewController.m */; };
 		7C35E8731915CA5600CC0573 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35E8721915CA5600CC0573 /* SecondViewController.m */; };
 		7C35E8751915CA5600CC0573 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C35E8741915CA5600CC0573 /* Images.xcassets */; };
@@ -51,6 +56,8 @@
 		7C39518A19ACEA2900C46071 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C39518919ACEA2900C46071 /* MapKit.framework */; };
 		7C39518D19AE4AFB00C46071 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C39518C19AE4AFB00C46071 /* MapViewController.m */; };
 		7C41CD9119E315BA0030AC60 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C41CD9019E315BA0030AC60 /* FacebookSDK.framework */; };
+		7C4F5CD41BE397FA00817602 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F5CD31BE397FA00817602 /* LoginViewController.m */; };
+		7C4F5CD61BEBAB4600817602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4F5CD51BEBAB4600817602 /* Main.storyboard */; };
 		7C941C401A1750490080BF13 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C941C381A1750490080BF13 /* icon2.png */; };
 		7C941C411A1750490080BF13 /* Moc01.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C941C391A1750490080BF13 /* Moc01.png */; };
 		7C941C421A1750490080BF13 /* Moc02.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C941C3A1A1750490080BF13 /* Moc02.png */; };
@@ -94,6 +101,13 @@
 		7C116BC419186C2C00ADF2F3 /* SENDBTN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SENDBTN.png; sourceTree = "<group>"; };
 		7C116BC819186FF500ADF2F3 /* TOUKOU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU.png; sourceTree = "<group>"; };
 		7C116BCA1918711100ADF2F3 /* TOUKOU2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOUKOU2.png; sourceTree = "<group>"; };
+		7C1FAAF21BDA61EC004831B8 /* CustomCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell1.xib; sourceTree = "<group>"; };
+		7C1FAAF51BDA686C004831B8 /* CustomCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell1.h; sourceTree = "<group>"; };
+		7C1FAAF61BDA686C004831B8 /* CustomCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell1.m; sourceTree = "<group>"; };
+		7C1FAAF91BE381DB004831B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		7C1FAAFA1BE381DB004831B8 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		7C1FAAFB1BE381DB004831B8 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		7C1FAAFC1BE381DB004831B8 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		7C22CDB11A455401009B84DC /* TOUKOU2 new new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TOUKOU2 new new.png"; sourceTree = "<group>"; };
 		7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 2ndStoryboard.storyboard; sourceTree = "<group>"; };
 		7C35E8561915CA5600CC0573 /* LostChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +120,6 @@
 		7C35E8671915CA5600CC0573 /* LostChecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LostChecker-Prefix.pch"; sourceTree = "<group>"; };
 		7C35E8681915CA5600CC0573 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C35E8691915CA5600CC0573 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C35E86C1915CA5600CC0573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C35E86E1915CA5600CC0573 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		7C35E86F1915CA5600CC0573 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		7C35E8711915CA5600CC0573 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -131,6 +144,9 @@
 		7C39518B19AE4AFB00C46071 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7C39518C19AE4AFB00C46071 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7C41CD9019E315BA0030AC60 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		7C4F5CD21BE397FA00817602 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7C4F5CD31BE397FA00817602 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7C4F5CD51BEBAB4600817602 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7C941C381A1750490080BF13 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		7C941C391A1750490080BF13 /* Moc01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moc01.png; sourceTree = "<group>"; };
 		7C941C3A1A1750490080BF13 /* Moc02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moc02.png; sourceTree = "<group>"; };
@@ -164,6 +180,9 @@
 				7C39518819AA26B900C46071 /* AssetsLibrary.framework in Frameworks */,
 				7CAFDCAA194C8220005EE1CD /* ImageIO.framework in Frameworks */,
 				7C35E89819160E2A00CC0573 /* CoreLocation.framework in Frameworks */,
+				7C1FAB001BE381DB004831B8 /* TwitterCore.framework in Frameworks */,
+				7C1FAAFE1BE381DB004831B8 /* TwitterKit.framework in Frameworks */,
+				7C1FAAFD1BE381DB004831B8 /* Fabric.framework in Frameworks */,
 				7C35E85C1915CA5600CC0573 /* CoreGraphics.framework in Frameworks */,
 				7C35E89619160E1500CC0573 /* CFNetwork.framework in Frameworks */,
 				7C35E89419160E0800CC0573 /* AudioToolbox.framework in Frameworks */,
@@ -209,9 +228,23 @@
 			path = images1;
 			sourceTree = "<group>";
 		};
+		7C1FAAF41BDA67F1004831B8 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FAAF21BDA61EC004831B8 /* CustomCell1.xib */,
+				7C1FAAF51BDA686C004831B8 /* CustomCell1.h */,
+				7C1FAAF61BDA686C004831B8 /* CustomCell1.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 		7C35E84D1915CA5600CC0573 = {
 			isa = PBXGroup;
 			children = (
+				7C1FAAF91BE381DB004831B8 /* Fabric.framework */,
+				7C1FAAFA1BE381DB004831B8 /* TwitterKit.framework */,
+				7C1FAAFB1BE381DB004831B8 /* TwitterKitResources.bundle */,
+				7C1FAAFC1BE381DB004831B8 /* TwitterCore.framework */,
 				7C941C371A1750490080BF13 /* images */,
 				7C0CFCC51A1770A0009644A6 /* images1 */,
 				7C956BBC1973BDFF004E5D1B /* FacebookSDK */,
@@ -266,8 +299,11 @@
 			children = (
 				7C35E8681915CA5600CC0573 /* AppDelegate.h */,
 				7C35E8691915CA5600CC0573 /* AppDelegate.m */,
-				7C35E86B1915CA5600CC0573 /* Main.storyboard */,
+				7C4F5CD51BEBAB4600817602 /* Main.storyboard */,
 				7C22CDB51A456847009B84DC /* 2ndStoryboard.storyboard */,
+				7C4F5CD21BE397FA00817602 /* LoginViewController.h */,
+				7C4F5CD31BE397FA00817602 /* LoginViewController.m */,
+				7C1FAAF41BDA67F1004831B8 /* CustomCell */,
 				7CFAF1B81A85F00500B88687 /* RuleViewController.h */,
 				7CFAF1B91A85F00500B88687 /* RuleViewController.m */,
 				7CB70E4219B2642E00561C0A /* ShowMapViewController.h */,
@@ -522,6 +558,7 @@
 				7C35E8521915CA5600CC0573 /* Sources */,
 				7C35E8531915CA5600CC0573 /* Frameworks */,
 				7C35E8541915CA5600CC0573 /* Resources */,
+				7C1FAAF81BE381A8004831B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -597,6 +634,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1FAAF31BDA61EC004831B8 /* CustomCell1.xib in Resources */,
 				7C22CDB61A456847009B84DC /* 2ndStoryboard.storyboard in Resources */,
 				7C941C471A1750490080BF13 /* Moc07.png in Resources */,
 				7C941C451A1750490080BF13 /* Moc05.png in Resources */,
@@ -623,8 +661,9 @@
 				7C0CFCCF1A1770A0009644A6 /* MOC-03.png in Resources */,
 				7C941C461A1750490080BF13 /* Moc06.png in Resources */,
 				7C079556192F5C8B0074A869 /* CAMERABTN.png in Resources */,
+				7C1FAAFF1BE381DB004831B8 /* TwitterKitResources.bundle in Resources */,
 				7C0CFCD31A1770A0009644A6 /* MOC-07.png in Resources */,
-				7C35E86D1915CA5600CC0573 /* Main.storyboard in Resources */,
+				7C4F5CD61BEBAB4600817602 /* Main.storyboard in Resources */,
 				7C116BC519186C2C00ADF2F3 /* SENDBTN.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +678,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C1FAAF81BE381A8004831B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 26d6ce49ab90f31d8d4c4eb4a96ec01e8bdbddcf f9d474582c6c8baab4dd71fe5c68b09986180f7f5bb00b26894c215ceaab9b62";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C35E8521915CA5600CC0573 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -648,10 +703,12 @@
 				7C35E86A1915CA5600CC0573 /* AppDelegate.m in Sources */,
 				7CFBA4C819389F5F008B58C0 /* SVProgressHUD.m in Sources */,
 				7C35E8701915CA5600CC0573 /* FirstViewController.m in Sources */,
+				7C1FAAF71BDA686C004831B8 /* CustomCell1.m in Sources */,
 				7C35E8661915CA5600CC0573 /* main.m in Sources */,
 				7CACD4251954527B009A1510 /* showmoreViewController.m in Sources */,
 				7CFAF1BA1A85F00500B88687 /* RuleViewController.m in Sources */,
 				7CB70E4419B2642E00561C0A /* ShowMapViewController.m in Sources */,
+				7C4F5CD41BE397FA00817602 /* LoginViewController.m in Sources */,
 				7C39518D19AE4AFB00C46071 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,14 +738,6 @@
 				7C35E8631915CA5600CC0573 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7C35E86B1915CA5600CC0573 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C35E86C1915CA5600CC0573 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		7C35E8841915CA5600CC0573 /* InfoPlist.strings */ = {

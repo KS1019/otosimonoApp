@@ -23,11 +23,14 @@
     NSNumber *LatitudetoSMVC;
     NSNumber *LongitudetoSMVC;
     
+    UIColor * BackGroundColor;
+    
 }
 @property(nonatomic)NSString *CommentString;
 @property(nonatomic)UIImage *showimage;
 @property(nonatomic)NSNumber *LatitudetoSMVC;
 @property(nonatomic)NSNumber *LongitudetoSMVC;
 @property(nonatomic)NSString *ObjectId;
+@property(nonatomic)UIColor * BackGroundColor;
 
 @end
