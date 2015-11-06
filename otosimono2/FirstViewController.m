@@ -20,8 +20,9 @@
 
 - (void)viewDidLoad
 {
-    table.delegate=self;
-    table.dataSource=self;
+    table.delegate = self;
+    table.dataSource = self;
+    backGroundColor = [UIColor new];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self refresh];
@@ -71,7 +72,6 @@
             str = [testobject objectForKey:@"foo"];
             
             CellColorNum = [testobject objectForKey:@"SegIndex"];
-            //cellcolor = [CellColorNum intValue];
             [CellColorArray addObject:CellColorNum];
             
             
@@ -151,13 +151,13 @@
         showmoreViewController *resultVC = sg.destinationViewController;
         //UIImage *image = [UIImage imageWithData:[sender getData]];
         NSIndexPath* indexPath = (NSIndexPath*)sender;
-        NSLog(@"length of ImageArray %d",[imagearray count]);
+       // NSLog(@"length of ImageArray %d",[imagearray count]);
         
         UIImage *image = [UIImage imageWithData:[[imagearray objectAtIndex: indexPath.row] getData]];
-        int cellColor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
+        int cellColor;
+        cellColor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
         NSLog(@"cellColor : %d when prepare For Segue",cellColor);
-        backGroundColor = [UIColor new];
-        switch (cellcolor) {
+        switch (cellColor) {
             case 0:
                 //ブルー
                  resultVC.BackGroundColor = [UIColor colorWithRed:0.74 green:0.96 blue:0.96 alpha:1.0];
@@ -247,7 +247,10 @@
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     NSLog(@"CellColor Method");
+    
+    int cellcolor;
     cellcolor = [[CellColorArray objectAtIndex:indexPath.row]intValue];
     switch (cellcolor) {
         case 0:

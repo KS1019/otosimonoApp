@@ -18,7 +18,6 @@
     IBOutlet UILabel *label;
     
     int segue;
-    int cellcolor;
     
     UIImage *img;
 

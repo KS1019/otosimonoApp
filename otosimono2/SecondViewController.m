@@ -25,15 +25,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //88888888888888888
+   
     NSLog(@"Second VC viewDidLoad");
-    /*
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-     */
+
     
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.51 green:0.96 blue:0.88 alpha:1.0];
     
     WhereSeg.selectedSegmentIndex=3;
     colorSegNum =[NSNumber numberWithInt:3];

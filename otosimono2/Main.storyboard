@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="vRq-qV-aKt" customClass="CustomCell1">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="vRq-qV-aKt" customClass="CustomCell1">
                                         <rect key="frame" x="0.0" y="86" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vRq-qV-aKt" id="oFx-6S-nE0">
@@ -31,12 +31,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MK-7N-nMR">
-                                <rect key="frame" x="20" y="93" width="194" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -54,7 +48,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="label" destination="6MK-7N-nMR" id="tD4-Hz-piF"/>
                         <outlet property="table" destination="ANy-gS-Vn3" id="w3G-Hp-YWf"/>
                         <segue destination="Ywd-em-BBk" kind="push" identifier="Segue" id="o8p-Se-bPi"/>
                     </connections>
@@ -314,9 +307,6 @@ LostCheckerが提供する本サービスは常に進化し続けており、Los
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moc07.png" translatesAutoresizingMaskIntoConstraints="NO" id="uaB-Cr-NX8">
-                                <rect key="frame" x="0.0" y="0.0" width="325" height="575"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-et-cXa">
                                 <rect key="frame" x="68" y="440" width="189" height="71"/>
                                 <state key="normal" image="MOC-02.png">
